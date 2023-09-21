@@ -6,7 +6,7 @@ these are my dotfiles :3
 
 chezmoi:
 
-- install [chezmoi](https://www.chezmoi.io/)
+- install [chezmoi](https://www.chezmoi.io)
 
 - `chezmoi init callyral`
 
@@ -42,13 +42,13 @@ extra steps:
 
 - `pipewire-pulse`, `pipewire-alsa` and `pipewire-audio` (arch)
 
-- [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
+- [wireplumber](https://wiki.archlinux.org/title/WirePlumber)
 
   - session manager for pipewire
 
 ## fonts
 
-jetbrains mono
+[jetbrains mono](https://www.jetbrains.com/lp/mono)
 
 [font awesome](https://fontawesome.com)
 
@@ -89,7 +89,7 @@ jetbrains mono
 
   if that doesn't work, [check this out](https://getantidote.github.io/install)
 
-- [oh my zsh](https://ohmyz.sh/)
+- [oh my zsh](https://ohmyz.sh)
 
 - [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -99,7 +99,7 @@ jetbrains mono
 
 ## apps
 
-[dunst](https://dunst-project.org/)
+[dunst](https://dunst-project.org)
 
 - notification daemon
 
@@ -165,6 +165,6 @@ then apply peach theme
 
 ## wallpaper
 
-made by me using krita
+made by me using [krita](https://krita.org)
 
 ![A Catppuccin-themed wallpaper with GLaDOS and an Aperture Science logo](dot_config/wallpaper.png)
