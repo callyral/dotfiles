@@ -163,4 +163,4 @@ TODO
 
 Made by me using Krita!
 
-![A Catppuccin wallpaper with GLaDOS and an Aperture Science logo](home/cally/.config/wallpaper.png)
+![A Catppuccin wallpaper with GLaDOS and an Aperture Science logo](dot_config/wallpaper.png)
