@@ -155,7 +155,9 @@ Here are my dotfiles!
 
 ## Other themes
 
-If they weren't mentioned, it's likely they're included in the dotfiles.
+~~If they weren't mentioned, it's likely they're included in the dotfiles.~~
+
+TODO
 
 ## Wallpaper
 
