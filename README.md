@@ -91,7 +91,7 @@ Here are my dotfiles!
     git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
     ```
 
-    After that, using [my .zshrc](home/cally/.zshrc) and related files should get it working.
+    After that, using [my zshrc](dot_zshrc) and related files should get it working.
 
     Otherwise, you can [check this out](https://getantidote.github.io/install).
 
