@@ -1,6 +1,6 @@
-# Dots
+# dotfiles
 
-Here be dots
+Here are my dotfiles!
 
 ## System
 
