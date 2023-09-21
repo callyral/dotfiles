@@ -1,0 +1,47 @@
+# Plugin management
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+# Startup commands
+kittyfetch
+
+# The following lines were added by compinstall
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle :compinstall filename '~/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+bindkey -v
+
+# Plugins in .zsh_plugins.txt
+antidote load
+
+# Oh My ZSH 
+ZSH_THEME="mh"
+
+# Aliases
+#  pacman and paru (arch)
+alias pacs='sudo pacman -S'
+alias pacr='paru -R'
+alias pacpurge='paru -Rcns'
+alias pacf='paru --repo -Ss' 
+alias pacl='paru -Qs' # 'l' stands for 'look'
+alias pacinfo='paru -Si'
+#---
+alias aurs='paru -S'
+alias aurf='paru -Ss'
+alias upd='paru'
+#  ls
+alias ls='eza -a'
+alias l='eza -la'
+alias ll='eza -lah'
+#  other
+alias btw='printf "   ~~~~~   \ni use arch btw\n   ~~~~~   \n"'
+alias wipe='rm ~/.zsh_history; clear'
+
+# Other useful things
+#  Adds colorful "help" command
+help() {
+    "$@" --help 2>&1 | bat --plain --language=help 
+}
