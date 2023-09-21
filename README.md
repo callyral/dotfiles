@@ -1,166 +1,170 @@
-# dotfiles
+# dotfiles by callyral
 
-Here are my dotfiles!
+these are my dotfiles :3
 
-## System
+## installation
 
-* [Arch Linux](https://archlinux.org/)
+chezmoi:
 
-  Rolling-release Linux distribution.
+- install [chezmoi](https://www.chezmoi.io/)
 
-* [GNU GRUB](https://www.gnu.org/software/grub/)
+- `chezmoi init callyral`
 
-  A Multiboot boot loader.
+- `chezmoi apply` to apply the dotfiles
 
-* [Sway](https://swaywm.org)
+extra steps:
 
-  i3-compatible wlroots window manager.
+- move [start-sway](start-sway) to `/usr/local/bin/start-sway`
 
-* [Waybar](https://github.com/Alexays/Waybar)
+- TO-DO
 
-  Status bar for Sway.
+## system info
 
-* [SDDM](https://github.com/sddm/sddm)
+[arch linux](https://archlinux.org/)
 
-  X11 and Wayland display manager.
+[sway](https://swaywm.org)
 
-* [Wayland](https://wayland.freedesktop.org/)
+- i3-compatible wlroots window manager
 
-  Replacement protocol for X11.
+- [waybar](https://github.com/Alexays/Waybar)
 
-* [Catppuccin Macchiato](https://github.com/catppuccin/catppuccin)
+[catppuccin macchiato](https://github.com/catppuccin/catppuccin)
 
-  A soothing pastel theme for the high-spirited.
+- a soothing pastel theme for the high-spirited
 
-## Screenshots
+## screenshots
 
 ![Screenshot Number One](screenshots/1.png)
 
-## Media
+## audio
 
-* [PipeWire](https://wiki.archlinux.org/title/PipeWire)
+[pipewire](https://wiki.archlinux.org/title/PipeWire)
 
-  Multimedia framework.
+- `pipewire-pulse`, `pipewire-alsa` and `pipewire-audio` (arch)
 
-  * pipewire-alsa
+- [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
 
-  * pipewire-audio
+  - session manager for pipewire
 
-  * pipewire-pulse
+## fonts
 
-* [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
+jetbrains mono
 
-  Session/policy manager for PipeWire.
+[font awesome](https://fontawesome.com)
 
-## Fonts
+[noto color emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 
-* Jetbrains Mono
+[noto sans](https://fonts.google.com/noto/specimen/Noto+Sans)
 
-* Font Awesome
+## terminal utilities
 
-* Noto Color Emoji
+[bat](https://github.com/sharkdp/bat)
 
-* Noto Sans
-
-## Command-line and TUI
-
-* [bat](https://github.com/sharkdp/bat)
-
-  Pager.
-
-* [bottom](https://github.com/ClementTsang/bottom)
+[bottom](https://github.com/ClementTsang/bottom)
   
-  System monitor written in Rust.
+- system monitor
 
-* [eza](https://github.com/eza-community/eza)
+[eza](https://github.com/eza-community/eza)
 
-  Alternative to ls written in Rust. 
+- modern alternative to ls
 
-* [neovim](https://neovim.io)
+[kittyfetch](https://github.com/callyral/kittyfetch)
+
+- fetch system info (comes with free ascii cat)
+
+[neovim](https://neovim.io)
   
-  Text editor, based on Vim.
+- vim-based text editor
 
-* [zsh](https://www.zsh.org/)
+[zsh](https://www.zsh.org/)
 
-  zsh, an interactive shell.
+- zsh, an interactive shell
 
-  * [antidote](https://getantidote.github.io) (requires installation)
+- [antidote](https://getantidote.github.io) (requires installation)
 
-    ```bash
-    # first, run this from an interactive zsh terminal session:
-    git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
-    ```
+  ```bash
+  # first, run this from an interactive zsh terminal session:
+  git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+  ```
 
-    After that, using [my zshrc](dot_zshrc) and related files should get it working.
+  if that doesn't work, [check this out](https://getantidote.github.io/install)
 
-    Otherwise, you can [check this out](https://getantidote.github.io/install).
+- [oh my zsh](https://ohmyz.sh/)
 
-  * [oh my zsh](https://ohmyz.sh/)
+- [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
-  * [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh completions](https://github.com/zsh-users/zsh-completions)
 
-  * [zsh completions](https://github.com/zsh-users/zsh-completions)
+- [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-  * [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+## apps
 
-## Apps
+[dunst](https://dunst-project.org/)
 
-* [dunst](https://dunst-project.org/)
+- notification daemon
 
-  Notification daemon.
+[foot](https://codeberg.org/dnkl/foot)
 
-* [Foot](https://codeberg.org/dnkl/foot)
+- terminal emulator
 
-  Terminal emulator.
-
-* [Librewolf](https://librewolf.net) 
+[librewolf](https://librewolf.net) 
   
-  Private web browser, based on Firefox. Theme is [SimpleFox](https://github.com/migueravila/SimpleFox) with some tweaks and Catppuccin Macchiato.
+- private web browser, based on firefox. 
 
-* [PCManFM](https://github.com/lxde/pcmanfm)
+- themed with [simplefox](https://github.com/migueravila/SimpleFox) and catppuccin
 
-  File manager.
+[pcmanfm](https://github.com/lxde/pcmanfm)
 
-## Other software 
+- graphical file manager
 
-* copyq
+## other software
 
-* gammastep-indicator
+[copyq](https://github.com/hluk/CopyQ)
 
-* nm-applet
+- clipboard management
 
-* [OpenTabletDriver](https://github.com/OpenTabletDriver/OpenTabletDriver)
+[gammastep-indicator](https://gitlab.com/chinstrap/gammastep)
 
-* [wofi-emoji](https://github.com/Zeioth/wofi-emoji)
+- night light (applet)
 
-## Install the GTK Theme
+nm-applet
 
-* On Arch, install [catppuccin-gtk-theme-macchiato](https://aur.archlinux.org/packages/catppuccin-gtk-theme-macchiato) from the AUR and apply the peach theme.
+- network managemement (applet)
 
-* Otherwise, follow [these instructions](https://github.com/catppuccin/gtk).
+[opentabletdriver](https://github.com/OpenTabletDriver/OpenTabletDriver)
 
-* You can use lxappearance to switch themes, although GTK\_THEME and ICON_THEME are configured in `start_sway`
+- open source driver for drawing tablets
 
-## Themes Used
+[wofi-emoji](https://github.com/Zeioth/wofi-emoji)
 
-[Catppuccin for dunst](https://github.com/catppuccin/dunst)
+- emoji selector script for wofi
 
-[Catppuccin for Foot](https://github.com/catppuccin/foot)
+## gtk theme 
 
-[Catppuccin for GTK](https://github.com/catppuccin/gtk)
+arch linux:
 
-[Catppuccin for qt5ct](https://github.com/catppuccin/qt5ct)
+- install [catppuccin-gtk-theme-macchiato](https://aur.archlinux.org/packages/catppuccin-gtk-theme-macchiato) from the aur
 
-[Catppuccin for Waybar](https://github.com/catppuccin/waybar)
+non-arch:
 
-## Other themes
+- follow [these instructions](https://github.com/catppuccin/gtk)
 
-~~If they weren't mentioned, it's likely they're included in the dotfiles.~~
+then apply peach theme
 
-TODO
+## themes
 
-## Wallpaper
+[catppuccin for dunst](https://github.com/catppuccin/dunst)
 
-Made by me using Krita!
+[catppuccin for foot](https://github.com/catppuccin/foot)
 
-![A Catppuccin wallpaper with GLaDOS and an Aperture Science logo](dot_config/wallpaper.png)
+[catppuccin for gtk](https://github.com/catppuccin/gtk)
+
+[catppuccin for qt5ct](https://github.com/catppuccin/qt5ct)
+
+[catppuccin for waybar](https://github.com/catppuccin/waybar)
+
+## wallpaper
+
+made by me using krita
+
+![A Catppuccin-themed wallpaper with GLaDOS and an Aperture Science logo](dot_config/wallpaper.png)
