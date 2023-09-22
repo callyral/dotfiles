@@ -14,7 +14,7 @@ chezmoi:
 
 extra steps:
 
-- move [start-sway](start-sway) to `/usr/local/bin/start-sway`
+- move [start-sway](path/start-sway) to somewhere in your `$PATH` (e.g `/usr/local/bin/start-sway`)
 
 - TO-DO
 
@@ -113,6 +113,8 @@ extra steps:
 
 - themed with [simplefox](https://github.com/migueravila/SimpleFox) and catppuccin
 
+- not included in this repo (TO-DO)
+
 [pcmanfm](https://github.com/lxde/pcmanfm)
 
 - graphical file manager
@@ -171,4 +173,4 @@ then apply peach theme
 
 made by me using [krita](https://krita.org)
 
-![A Catppuccin-themed wallpaper with GLaDOS and an Aperture Science logo](dot_config/wallpaper.png)
+![A Catppuccin-themed wallpaper with GLaDOS and an Aperture Science logo](home/dot_config/wallpaper.png)
