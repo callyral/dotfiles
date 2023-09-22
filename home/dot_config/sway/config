@@ -51,8 +51,8 @@ default_border pixel 2
 default_floating_border pixel 2 
 
 ### Gaps
-gaps inner 8
-gaps outer 4
+gaps inner 2
+gaps outer 3
 smart_gaps on
 
 ### Output configuration
