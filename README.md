@@ -34,7 +34,9 @@ extra steps:
 
 ## screenshots
 
-![Screenshot Number One](screenshots/1.png)
+![screenshot one](screenshots/1.png)
+
+![screenshot two](screenshots/2.png)
 
 ## audio
 
