@@ -48,7 +48,7 @@ extra steps:
 
 ## fonts
 
-[jetbrains mono](https://www.jetbrains.com/lp/mono)
+[fira code](https://github.com/tonsky/FiraCode)
 
 [font awesome](https://fontawesome.com)
 
