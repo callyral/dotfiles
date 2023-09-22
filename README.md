@@ -117,6 +117,10 @@ extra steps:
 
 - graphical file manager
 
+[zathura](https://pwmt.org/projects/zathura)
+
+- document viewer
+
 ## other software
 
 [copyq](https://github.com/hluk/CopyQ)
