@@ -16,6 +16,8 @@ extra steps:
 
 - move [start-sway](path/start-sway) to somewhere in your `$PATH` (e.g `/usr/local/bin/start-sway`)
 
+- replace `/usr/share/wayland-sessions/sway.desktop` with [sway.desktop](usr/share/wayland-sessions/sway.desktop)
+
 - TO-DO
 
 ## system info
