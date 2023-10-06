@@ -21,23 +21,22 @@ antidote load
 ZSH_THEME="mh"
 
 # Aliases
-#  pacman and paru (arch)
-alias pacs='sudo pacman -S'
-alias pacr='paru -R'
-alias pacpurge='paru -Rcns'
-alias pacf='paru --repo -Ss' 
-alias pacl='paru -Qs' # 'l' stands for 'look'
-alias pacinfo='paru -Si'
-#---
-alias aurs='paru -S'
-alias aurf='paru -Ss'
-alias upd='paru'
+#  xbps (void)
+#   xbps package install
+alias xpi='sudo xbps-install'
+#   xbps package remove
+alias xps='sudo xbps-remove'
+alias purge='sudo xbps-remove -R'
+#   xbps package find
+alias xpf='xbps-query -Rs'
+#   xbps package look
+alias xpl='xbps-query -s'
+alias upd='xbps-install -Su'
 #  ls
 alias ls='eza -a'
 alias l='eza -la'
 alias ll='eza -lah'
 #  other
-alias btw='printf "   ~~~~~   \ni use arch btw\n   ~~~~~   \n"'
 alias wipe='rm ~/.zsh_history; clear'
 
 # Other useful things
