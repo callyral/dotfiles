@@ -10,4 +10,7 @@ nm-applet &
 copyq &
 gammastep-indicator -m wayland &
 
-pgrep OpenTabletDrive || otd-daemon &
+#pgrep OpenTabletDrive || otd-daemon &
+
+gsettings set org.gnome.desktop.interface icon-theme "Tela-circle-purple-dark" &
+gsettings set org.gnome.desktop.interface cursor-theme "Catppuccin-Macchiato-Peach-Cursors" &

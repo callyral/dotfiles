@@ -73,11 +73,6 @@ require('lualine').setup {
 	},
 }
 
--- * nvim-nu
-require('nu').setup {
-	use_lsp_features = false -- requires null-ls.nvim
-}
-
 -- * treesitter
 require('nvim-treesitter.configs').setup {
 	highlight = { enable = true }

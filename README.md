@@ -2,6 +2,8 @@
 
 these are my dotfiles :3
 
+recently switched from arch to void linux! repo will see changes
+
 ## installation
 
 chezmoi:
@@ -18,11 +20,13 @@ extra steps:
 
 - replace `/usr/share/wayland-sessions/sway.desktop` with [sway.desktop](usr/share/wayland-sessions/sway.desktop)
 
-- TO-DO
+- TODO: complete list
 
 ## system info
 
-[arch linux](https://archlinux.org/)
+~~[arch linux](https://archlinux.org/)~~
+
+[void linux](https://voidlinux.org)
 
 [sway](https://swaywm.org)
 
@@ -36,6 +40,8 @@ extra steps:
 
 ## screenshots
 
+TODO: update screenshots (not that different)
+
 ![screenshot one](screenshots/1.png)
 
 ![screenshot two](screenshots/2.png)
@@ -44,7 +50,7 @@ extra steps:
 
 [pipewire](https://wiki.archlinux.org/title/PipeWire)
 
-- `pipewire-pulse`, `pipewire-alsa` and `pipewire-audio` (arch)
+see [void - pipewire](https://docs.voidlinux.org/config/media/pipewire.html)
 
 - [wireplumber](https://wiki.archlinux.org/title/WirePlumber)
 
@@ -111,13 +117,11 @@ extra steps:
 
 - terminal emulator
 
-[librewolf](https://librewolf.net) 
-  
-- private web browser, based on firefox. 
+[firefox](https://www.mozilla.org/en-US/firefox/new/)
 
-- themed with [simplefox](https://github.com/migueravila/SimpleFox) and catppuccin
+- TODO: add theme configuration to repo
 
-- not included in this repo (TO-DO)
+- themed with [simplefox](https://github.com/migueravila/SimpleFox)
 
 [pcmanfm](https://github.com/lxde/pcmanfm)
 
@@ -141,25 +145,13 @@ nm-applet
 
 - network managemement (applet)
 
-[opentabletdriver](https://github.com/OpenTabletDriver/OpenTabletDriver)
-
-- open source driver for drawing tablets
-
 [wofi-emoji](https://github.com/Zeioth/wofi-emoji)
 
 - emoji selector script for wofi
 
 ## gtk theme 
 
-arch linux:
-
-- install [catppuccin-gtk-theme-macchiato](https://aur.archlinux.org/packages/catppuccin-gtk-theme-macchiato) from the aur
-
-non-arch:
-
-- follow [these instructions](https://github.com/catppuccin/gtk)
-
-then apply peach theme
+follow [catppuccin gtk instructions](https://github.com/catppuccin/gtk)
 
 ## themes
 
