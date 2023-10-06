@@ -25,7 +25,7 @@ ZSH_THEME="mh"
 #   xbps package install
 alias xpi='sudo xbps-install'
 #   xbps package remove
-alias xps='sudo xbps-remove'
+alias xpr='sudo xbps-remove'
 alias purge='sudo xbps-remove -R'
 #   xbps package find
 alias xpf='xbps-query -Rs'
