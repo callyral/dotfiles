@@ -22,7 +22,7 @@ set $menu wofi --show drun --allow-images | xargs swaymsg exec --
 set $cmd_menu wofi --show run | xargs swaymsg exec --
 
 # Other preferred apps
-set $web env GDK_BACKEND=wayland vblank_mode=0 firefox
+set $web env MOZ_ENABLE_WAYLAND=1 firefox
 set $files pcmanfm
 
 # Screenshots
