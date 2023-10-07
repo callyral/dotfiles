@@ -29,6 +29,7 @@ set $files pcmanfm
 set $shot_full sh $HOME/.config/sway/scripts/screenshot.sh full  
 set $shot_full_copy sh $HOME/.config/sway/scripts/screenshot.sh full-copy
 set $shot_sel_copy sh $HOME/.config/sway/scripts/screenshot.sh sel-copy
+set $color_picker hyprpicker -na
 
 # Volume control
 set $mute wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -116,7 +117,8 @@ input "type:touchpad" {
 
     bindsym $mod+z exec $shot_full
     bindsym $mod+Shift+z exec $shot_full_copy
-    bindsym $mod+Shift+s exec $shot_sel_copy 
+    bindsym $mod+Shift+s exec $shot_sel_copy
+    bindsym $mod+c exec $color_picker
 #
 # Basics:
 #

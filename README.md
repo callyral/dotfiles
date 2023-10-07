@@ -32,6 +32,12 @@ extra steps:
 
 - i3-compatible wlroots window manager
 
+- [hyprpicker](https://github.com/hyprwm/hyprpicker)
+
+- [swayidle](https://github.com/swaywm/swayidle)
+
+- [swaylock](https://github.com/swaywm/swaylock)
+
 - [waybar](https://github.com/Alexays/Waybar)
 
 [catppuccin macchiato](https://github.com/catppuccin/catppuccin)
