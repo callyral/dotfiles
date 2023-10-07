@@ -31,7 +31,7 @@ alias purge='sudo xbps-remove -R'
 alias xpf='xbps-query -Rs'
 #   xbps package look
 alias xpl='xbps-query -s'
-alias upd='xbps-install -Su'
+alias upd='sudo xbps-install -Su'
 #  ls
 alias ls='eza -a'
 alias l='eza -la'
