@@ -20,11 +20,11 @@ extra steps:
 
 - replace `/usr/share/wayland-sessions/sway.desktop` with [sway.desktop](usr/share/wayland-sessions/sway.desktop)
 
+- install required software (linked in this README)
+
 - TODO: complete list
 
 ## system info
-
-~~[arch linux](https://archlinux.org/)~~
 
 [void linux](https://voidlinux.org)
 
@@ -160,6 +160,8 @@ follow [catppuccin gtk instructions](https://github.com/catppuccin/gtk)
 [catppuccin for foot](https://github.com/catppuccin/foot)
 
 [catppuccin for gtk](https://github.com/catppuccin/gtk)
+
+[catppuccin for kvantum](https://github.com/catppuccin/Kvantum)
 
 [catppuccin for qt5ct](https://github.com/catppuccin/qt5ct)
 
