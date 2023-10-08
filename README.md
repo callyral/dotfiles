@@ -50,8 +50,6 @@ extra steps:
 
 ## screenshots
 
-TODO: update screenshots
-
 ![screenshot one](screenshots/1.png)
 
 ![screenshot two](screenshots/2.png)
