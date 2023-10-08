@@ -85,7 +85,6 @@ button:hover {
 #wireplumber,
 #pulseaudio,
 #network,
-#custom-media,
 #mpd {
     padding: 0 5px;
     font-weight: bold;
@@ -182,6 +181,11 @@ button:hover {
     background-color: @red;
 }
 
+/* custom-media (custom/media) */
+#custom-media {
+    padding: 0 10px;
+    color: @overlay1;
+}
 
 /* idle_inhibidor (unused) */
 #idle_inhibitor {

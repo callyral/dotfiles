@@ -4,7 +4,7 @@
     "height": 24,
     "spacing": 4, // spacing between modules
 
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
+    "modules-left": ["sway/workspaces", "custom/media", "sway/mode", "sway/scratchpad", "sway/window"],
     "modules-center": ["clock"],
     "modules-right": ["wireplumber", "backlight", "cpu", "memory", "temperature", "battery", "battery#bat2", "tray"],
 
@@ -86,6 +86,22 @@
         "format-icons": ["", "", ""]
     },
     
+    "custom/media": {
+        "format": "{icon}{}",
+        "format-icons": {
+            "default": " "
+        },
+        "escape": true,
+        "return-type": "json",
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    },
+
     /*
      commented out since i don't use these
      *
@@ -108,19 +124,6 @@
         },
         "on-click": "pavucontrol"
     },
-
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
 
     "keyboard-state": {
         "numlock": true,
