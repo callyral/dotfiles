@@ -36,6 +36,10 @@ set $mute wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 set $vol_lower wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.2
 set $vol_raise wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.2
 
+### Bar
+bar {
+    swaybar_command waybar
+}
 
 ### Xwayland
 xwayland enable

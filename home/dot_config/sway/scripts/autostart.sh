@@ -4,7 +4,7 @@ pipewire &
 pipewire-pulse &
 pgrep wireplumber || wireplumber &
 
-waybar &
+#waybar & # in sway config
 
 nm-applet &
 copyq &
