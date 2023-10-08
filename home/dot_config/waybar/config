@@ -1,43 +1,35 @@
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 28, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "layer": "top", // whether to be on top of windows or below
+    "position": "top", // edge of the screen
+    "height": 28,
+    "spacing": 4, // spacing between modules
+
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "wireplumber", "backlight", "cpu", "memory", "temperature", "battery", "battery#bat2", "tray"],
-    // Modules configuration
+    "modules-right": ["wireplumber", "backlight", "cpu", "memory", "temperature", "battery", "battery#bat2", "tray"],
+
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "warp-on-scroll": false,
+        "warp-on-scroll": false
     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
+    // not used in my sway config
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
-        "format": "{icon} {count}",
+        "format": "{icon}  {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", " "],
         "tooltip": true,
-        "tooltip-format": "{app}: {title}"
+        "tooltip-format": "{app} · {title}"
     },
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "tray": {
@@ -57,15 +49,17 @@
         "format": "{}% "
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
+        // "thermal-zone": 2, // thermal zone, as in /sys/class/thermal/
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", // alt. path to temperature file (not /sys/class/thermal/)
+        "critical-threshold": 80, // critical temperature! (celsius) 
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
+
     "backlight": {
+        // choose your device, auto-detection works for me.
         // "device": "acpi_video1",
+        // "device": "intel_backlight",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -82,17 +76,19 @@
         "format-icons": [" ", " ", " ", " ", " "]
     },
     "battery#bat2": {
-        "bat": "BAT2"
+        "bat": "BAT2" // battery, as in /sys/class/power_supply/
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "pavucontrol",
+        "format-icons": ["", "", ""]
     },
+    
+    /*
+     commented out since i don't use these
+     *
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -112,12 +108,7 @@
         },
         "on-click": "pavucontrol"
     },
-    "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "on-click": "pavucontrol",
-        "format-icons": ["", "", ""]
-    },
+
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -130,5 +121,26 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    */
 }
 
