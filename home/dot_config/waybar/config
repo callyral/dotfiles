@@ -1,7 +1,7 @@
 {
     "layer": "top", // whether to be on top of windows or below
     "position": "top", // edge of the screen
-    "height": 28,
+    "height": 24,
     "spacing": 4, // spacing between modules
 
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
