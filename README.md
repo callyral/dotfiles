@@ -44,19 +44,23 @@ extra steps:
 
 - a soothing pastel theme for the high-spirited
 
+[emptty](https://github.com/tvrzna/emptty)
+
+- command-line display manager
+
 ## screenshots
 
-TODO: update screenshots (not that different)
+TODO: update screenshots
 
 ![screenshot one](screenshots/1.png)
 
 ![screenshot two](screenshots/2.png)
 
-## audio
+## multimedia 
 
 [pipewire](https://wiki.archlinux.org/title/PipeWire)
 
-see [void - pipewire](https://docs.voidlinux.org/config/media/pipewire.html)
+- see [void - pipewire](https://docs.voidlinux.org/config/media/pipewire.html)
 
 - [wireplumber](https://wiki.archlinux.org/title/WirePlumber)
 

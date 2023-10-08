@@ -8,5 +8,12 @@
   ],
   "diagnostic.displayByAle": true,
   "snippets.ultisnips.pythonPrompt": false,
-  "Lua.diagnostics.globals": ["vim"]
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
+  "zig.enabled": true,
+  "zig.startUpMessage": true,
+  "zig.path": "zls",
+  "zig.debugLog": false,
+  "zig.zls.enabled": false
 }

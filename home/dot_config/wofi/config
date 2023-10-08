@@ -1,4 +1,8 @@
 key_expand=Shift_R
-normal_window=true
 insensitive=true
 hide_scroll=true
+gtk_dark=true
+image_size=20
+term=foot
+width=30%
+height=30%
