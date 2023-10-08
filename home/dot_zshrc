@@ -25,12 +25,15 @@ ZSH_THEME="mh"
 #   xbps package install
 alias xpi='sudo xbps-install'
 #   xbps package remove
-alias xpr='sudo xbps-remove'
-alias purge='sudo xbps-remove -R'
-#   xbps package find
-alias xpf='xbps-query -Rs'
-#   xbps package look
-alias xpl='xbps-query -s'
+alias xpr='sudo xbps-remove'      # remove package
+alias purge='sudo xbps-remove -R' # also remove dependencies
+#   xbps package find [local]
+alias xpfl='xbps-query -s'        # local packages
+alias xpf='xbps-query -Rs'        # looks in repo
+#   xbps package info [local]
+alias xpinfol='xbps-query -S'
+alias xpinfo='xbps-query -RS'
+#   update
 alias upd='sudo xbps-install -Su'
 #  ls
 alias ls='eza -a'
