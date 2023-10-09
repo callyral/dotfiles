@@ -120,7 +120,7 @@ button:hover {
 }
 #pulseaudio.muted,
 #wireplumber.muted {
-    color: @red;
+    font-weight: normal;
 }
 
 /* backlight */
