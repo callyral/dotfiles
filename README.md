@@ -2,31 +2,35 @@
 
 these are my dotfiles :3
 
-recently switched from arch to void linux! repo will see changes
-
 ## installation
 
-chezmoi:
+### step one: 
 
-- install [chezmoi](https://www.chezmoi.io)
+- make sure you have the necessary software listed in this README
+
+### step two: 
+
+root config (unmanaged by chezmoi)
+
+- clone this repo
+
+- move relevant things in [repo/path](path/) to somewhere in your `$PATH` (e.g `/usr/local/bin/`)
+
+- move relevant things in [repo/usr](usr/) and in [repo/etc](etc/) to their respective directories in root
+
+### step three:
+
+- install [chezmoi](https://www.chezmoi.io) (dotfile management)
 
 - `chezmoi init callyral`
 
 - `chezmoi apply` to apply the dotfiles
 
-extra steps:
-
-- move [start-sway](path/start-sway) to somewhere in your `$PATH` (e.g `/usr/local/bin/start-sway`)
-
-- replace `/usr/share/wayland-sessions/sway.desktop` with [sway.desktop](usr/share/wayland-sessions/sway.desktop)
-
-- install required software (linked in this README)
-
-- TODO: complete list
-
-## system info
+## basic system info
 
 [void linux](https://voidlinux.org)
+
+- enter the void
 
 [sway](https://swaywm.org)
 
@@ -38,15 +42,7 @@ extra steps:
 
 - [swaylock](https://github.com/swaywm/swaylock)
 
-- [waybar](https://github.com/Alexays/Waybar)
-
-[catppuccin macchiato](https://github.com/catppuccin/catppuccin)
-
-- a soothing pastel theme for the high-spirited
-
-[emptty](https://github.com/tvrzna/emptty)
-
-- command-line display manager
+- [Waybar](https://github.com/Alexays/Waybar)
 
 ## screenshots
 
@@ -56,23 +52,23 @@ extra steps:
 
 ## multimedia 
 
-[pipewire](https://wiki.archlinux.org/title/PipeWire)
+[PipeWire](https://pipewire.org)
 
-- see [void - pipewire](https://docs.voidlinux.org/config/media/pipewire.html)
+- see [this void documentation](https://docs.voidlinux.org/config/media/pipewire.html)
 
-- [wireplumber](https://wiki.archlinux.org/title/WirePlumber)
+- [WirePlumber](https://wiki.archlinux.org/title/WirePlumber)
 
   - session manager for pipewire
 
 ## fonts
 
-[fira code](https://github.com/tonsky/FiraCode)
+[FiraCode](https://github.com/tonsky/FiraCode)
 
-[font awesome](https://fontawesome.com)
+[Font Awesome](https://fontawesome.com)
 
-[noto color emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
+[Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 
-[noto sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+[Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
 
 ## terminal utilities
 
@@ -81,6 +77,10 @@ extra steps:
 [bottom](https://github.com/ClementTsang/bottom)
   
 - system monitor
+
+[emptty](https://github.com/tvrzna/emptty)
+
+- tty display manager
 
 [eza](https://github.com/eza-community/eza)
 
@@ -98,14 +98,14 @@ extra steps:
 
 - zsh, an interactive shell
 
-- [antidote](https://getantidote.github.io) (requires installation)
+- [antidote](https://getantidote.github.io)
+
+  - [requires installation](https://getantidote.github.io/install)
 
   ```bash
   # first, run this from an interactive zsh terminal session:
   git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
   ```
-
-  if that doesn't work, [check this out](https://getantidote.github.io/install)
 
 - [oh my zsh](https://ohmyz.sh)
 
@@ -129,7 +129,7 @@ extra steps:
 
 - TODO: add theme configuration to repo
 
-- themed with [simplefox](https://github.com/migueravila/SimpleFox)
+- themed with [SimpleFox](https://github.com/migueravila/SimpleFox)
 
 [pcmanfm](https://github.com/lxde/pcmanfm)
 
@@ -141,39 +141,53 @@ extra steps:
 
 ## other software
 
-[copyq](https://github.com/hluk/CopyQ)
+[CopyQ](https://github.com/hluk/CopyQ)
 
 - clipboard management
 
-[gammastep-indicator](https://gitlab.com/chinstrap/gammastep)
+[gammastep](https://gitlab.com/chinstrap/gammastep)
 
-- night light (applet)
+- adjust the screen's color temperature
 
-nm-applet
+- gammastep-indicator
 
-- network managemement (applet)
+  - applet for gammastep
+
+[NetworkManager](https://networkmanager.dev/)
+
+- network managemement
+
+- [iwd](https://iwd.wiki.kernel.org/)
+
+  - backend for NetworkManager
+
+- [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 
 [wofi-emoji](https://github.com/Zeioth/wofi-emoji)
 
 - emoji selector script for wofi
 
-## gtk theme 
-
-follow [catppuccin gtk instructions](https://github.com/catppuccin/gtk)
-
 ## themes
 
-[catppuccin for dunst](https://github.com/catppuccin/dunst)
+[catppuccin macchiato peach](https://github.com/catppuccin/catppuccin)
 
-[catppuccin for foot](https://github.com/catppuccin/foot)
+- a soothing pastel theme for the high-spirited
 
-[catppuccin for gtk](https://github.com/catppuccin/gtk)
+- [catppuccin for dunst](https://github.com/catppuccin/dunst)
 
-[catppuccin for kvantum](https://github.com/catppuccin/Kvantum)
+- [catppuccin for firefox](https://github.com/catppuccin/firefox)
 
-[catppuccin for qt5ct](https://github.com/catppuccin/qt5ct)
+- [catppuccin for foot](https://github.com/catppuccin/foot)
 
-[catppuccin for waybar](https://github.com/catppuccin/waybar)
+- [catppuccin for gtk](https://github.com/catppuccin/gtk)
+
+  - follow [these instructions](https://github.com/catppuccin/gtk)
+
+- [catppuccin for kvantum](https://github.com/catppuccin/Kvantum)
+
+- [catppuccin for qt5ct](https://github.com/catppuccin/qt5ct)
+
+- [catppuccin for waybar](https://github.com/catppuccin/waybar)
 
 ## wallpaper
 
