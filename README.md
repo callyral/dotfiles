@@ -94,7 +94,35 @@ root config (unmanaged by chezmoi)
   
 - vim-based text editor
 
-[zsh](https://www.zsh.org/)
+- this list contains the more major plugins. see [plugins.lua](home/dot_config/nvim/lua/executable_plugins.lua)
+
+- [ale](https://github.com/dense-analysis/ale)
+
+  - code linting
+
+- [alpha](https://github.com/goolord/alpha-nvim)
+
+  - greeter
+
+- [barbar](https://github.com/romgrk/barbar.nvim)
+
+  - tab/bufferline
+
+- [catppuccin](https://github.com/catppuccin/nvim)
+
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+
+  - git decorations
+
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+  - a statusline written in lua
+
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+  - better code highlighting
+
+[zsh](https://www.zsh.org)
 
 - zsh, an interactive shell
 
