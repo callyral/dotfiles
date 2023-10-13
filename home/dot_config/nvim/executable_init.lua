@@ -52,6 +52,17 @@ require('bufferline').setup {
 	}
 }
 
+-- * catppuccin
+require('catppuccin').setup {
+	integrations = {
+		alpha = true,
+		barbar = true,
+		coc_nvim = true,
+		gitsigns = true,
+		treesitter = true,
+	}
+}
+
 -- * git signs
 require('gitsigns').setup {
 	signs = {
@@ -67,7 +78,7 @@ require('gitsigns').setup {
 -- * lualine
 require('lualine').setup {
 	options = {
-		theme = 'nord',
+		theme = 'catppuccin',
 		section_separators = { left = '', right = '' },
 	    component_separators = { left = '|', right = '|' },
 	},

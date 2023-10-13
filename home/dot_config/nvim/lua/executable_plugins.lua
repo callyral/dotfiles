@@ -19,13 +19,11 @@ vim.g.mapleader = " "
 -- plugins
 require("lazy").setup({
     -- Dependecy section
-    { "nvim-tree/nvim-web-devicons", lazy = true },
+    { 'nvim-tree/nvim-web-devicons', lazy = true },
 
     'dense-analysis/ale', -- code linting
     'editorconfig/editorconfig-vim', -- support for .editorconfig
-    'fladson/vim-kitty', -- support for kitty.conf
     'honza/vim-snippets', -- some snippets
-    'mhinz/vim-startify', -- start screen
     'preservim/nerdcommenter', -- automatic text commenter
     'scrooloose/nerdtree', -- tree file management
     'tmsvg/pear-tree', -- pair quotes, parentheses, html tags, etc
@@ -36,6 +34,15 @@ require("lazy").setup({
     -- * git-related
     'lewis6991/gitsigns.nvim', -- git decorations
     'tpope/vim-fugitive', -- git command support
+    
+    -- * alpha - greeter (dashboard theme)
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    },
 
     -- * barbar - tab/bufferline
     {
