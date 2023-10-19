@@ -18,18 +18,23 @@ vim.g.mapleader = " "
 
 -- plugins
 require("lazy").setup({
-    -- Dependecy section
+    -- Dependencies
     { 'nvim-tree/nvim-web-devicons', lazy = true },
+
+    -- LSP
+    'neovim/nvim-lspconfig', -- LSP config
+    'hrsh7th/nvim-cmp', -- autocompletion
+    'L3MON4D3/LuaSnip', -- snippets
+    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+    'saadparwaiz1/cmp_luasnip', -- snippets source for nvim-cmp
 
     'dense-analysis/ale', -- code linting
     'editorconfig/editorconfig-vim', -- support for .editorconfig
-    'honza/vim-snippets', -- some snippets
     'preservim/nerdcommenter', -- automatic text commenter
     'scrooloose/nerdtree', -- tree file management
     'tmsvg/pear-tree', -- pair quotes, parentheses, html tags, etc
     'tpope/vim-sleuth', -- indentation management
     {'mg979/vim-visual-multi', branch = 'master'},
-    {'neoclide/coc.nvim', branch = 'release'}, -- code completion
 
     -- * git-related
     'lewis6991/gitsigns.nvim', -- git decorations
