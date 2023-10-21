@@ -81,8 +81,6 @@ require('cmp').setup {
     sources = {
         { name = 'snippy' },
         { name = 'path' },
-        { name = 'buffer' },
-        { name = 'cmdline' },
         { name = 'nvim_lsp' }
     }
 }

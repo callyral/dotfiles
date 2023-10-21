@@ -1,4 +1,4 @@
-vim.g['ale_disable_lsp'] = 'auto'
+vim.g['ale_disable_lsp'] = 1
 vim.g['ale_use_neovim_diagnostics_api'] = 1
 
 -- bootstrap lazy.nvim
@@ -24,8 +24,8 @@ require('lazy').setup({
     'neovim/nvim-lspconfig', -- LSP config
     -- nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-cmdline',
+    -- 'hrsh7th/cmp-buffer',
+    -- 'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-path',
     'hrsh7th/nvim-cmp', -- autocompletion
     -- code snippets
