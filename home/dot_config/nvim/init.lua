@@ -41,6 +41,22 @@ require('bufferline').setup {
     }
 }
 
+-- * cmp
+require('cmp').setup {
+    snippet = {
+        expand = function(args)
+            require('snippy').expand_snippet(args.body)
+        end
+    },
+    sources = {
+        { name = 'snippy' },
+        { name = 'path' },
+        { name = 'buffer' },
+        { name = 'cmdline' },
+        { name = 'nvim_lsp' }
+    }
+}
+
 -- * git signs
 require('gitsigns').setup {
     signs = {

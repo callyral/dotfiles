@@ -22,10 +22,16 @@ require('lazy').setup({
 
     -- LSP
     'neovim/nvim-lspconfig', -- LSP config
+    -- nvim-cmp
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-path',
     'hrsh7th/nvim-cmp', -- autocompletion
-    'L3MON4D3/LuaSnip', -- snippets
-    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-    'saadparwaiz1/cmp_luasnip', -- snippets source for nvim-cmp
+    -- code snippets
+    'dcampos/nvim-snippy',
+    'dcampos/cmp-snippy',
+    'honza/vim-snippets',
 
     'dense-analysis/ale', -- code linting
     'editorconfig/editorconfig-vim', -- support for .editorconfig
