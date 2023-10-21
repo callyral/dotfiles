@@ -1,23 +1,22 @@
-vim.g['ale_disable_lsp'] = 1
+vim.g['ale_disable_lsp'] = 'auto'
+vim.g['ale_use_neovim_diagnostics_api'] = 1
 
 -- bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable',
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
-
--- plugins
-require("lazy").setup({
+-- . plugins .
+require('lazy').setup({
     -- Dependencies
     { 'nvim-tree/nvim-web-devicons', lazy = true },
 
