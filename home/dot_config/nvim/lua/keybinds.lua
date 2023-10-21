@@ -21,14 +21,11 @@ map('n', '<A-t>', ':tabnew<CR>', opts)
 map('n', '<Leader>v', ':vsplit<CR>', opts)
 map('n', '<Leader>h', ':split<CR>', opts)
 
--- >> Tab/buffer management
---	this uses barbar
+-- * Tab/buffer management
 -- go to previous/next tab/buffer
 map('n', '<C-Left>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-Right>', '<Cmd>BufferNext<CR>', opts)
-
 -- (un)pin tab/buffer
 map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
-
 -- close tab/buffer
 map('n', '<C-q>', '<Cmd>BufferClose<CR>', opts)

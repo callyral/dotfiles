@@ -42,11 +42,36 @@ require('bufferline').setup {
 }
 
 -- * cmp
+local snippy = require('snippy')
+local cmp = require('cmp')
 require('cmp').setup {
     snippet = {
         expand = function(args)
-            require('snippy').expand_snippet(args.body)
+            snippy.expand_snippet(args.body)
         end
+    },
+    mapping = {
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif snippy.can_expand_or_advance() then
+                snippy.expand_or_advance()
+            elseif has_words_before() then
+                cmp.complete()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
+
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif snippy.can_jump(-1) then
+                snippy.previous()
+            else
+                fallback()
+            end
+        end, { "i", "s" }),
     },
     sources = {
         { name = 'snippy' },
@@ -77,19 +102,6 @@ require('lualine').setup {
         component_separators = { left = '|', right = '|' },
     },
 }
-
--- * snippy
-require('snippy').setup({
-    mappings = {
-        is = {
-            ['<Tab>'] = 'expand_or_advance',
-            ['<S-Tab>'] = 'previous',
-        },
-        nx = {
-            ['<leader>x'] = 'cut_text',
-        },
-    },
-})
 
 -- * treesitter
 require('nvim-treesitter.configs').setup {
