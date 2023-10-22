@@ -25,5 +25,5 @@ map('n', '<C-S-Tab>', ':bprevious<CR>', opts) -- go to previous buffer
 map('n', '<C-Left>',  ':bprevious<CR>', opts)
 map('n', '<C-Tab>',   ':bnext<CR>', opts)     -- go to next buffer
 map('n', '<C-Right>', ':bnext<CR>', opts)
-map('n', '<C-w>',     ':bdelete<CR>', opts)   -- close current buffer
-map('n', '<C-q>',     ':bdelete<CR>', opts)
+map('n', '<C-q>',     ':bdelete<CR>', opts)   -- close current buffer
+--map('n', '<C-w>',     ':bdelete<CR>', opts)
