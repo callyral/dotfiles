@@ -16,14 +16,14 @@ map('i', '<A-Up>',   '<Esc>:m .-2<CR>==gi', opts)   -- move current line down
 map('n', '<C-s>', ':w<CR>', opts)      -- save
 map('n', '<C-z>', 'za', opts)          -- toggle current fold
 map('n', '<Esc>', ':noh<Esc>', opts)   -- hide highlights
-map('n', '<C-t>', ':tabnew<CR>', opts) -- make a new tab
 
 -- * tab and buffer management
-map('n', '<Leader>h', ':split<CR>', opts)       -- split current buffer horizontally
-map('n', '<Leader>v', ':vsplit<CR>', opts)      -- split current buffer vertically
-map('n', '<C-S-Tab>', ':bprevious<CR>', opts)   -- go to previous buffer
+map('n', '<C-t>',     ':enew<CR>', opts)      -- make a new buffer in the current window
+map('n', '<Leader>h', ':split<CR>', opts)     -- split current buffer horizontally
+map('n', '<Leader>v', ':vsplit<CR>', opts)    -- split current buffer vertically
+map('n', '<C-S-Tab>', ':bprevious<CR>', opts) -- go to previous buffer
 map('n', '<C-Left>',  ':bprevious<CR>', opts)
-map('n', '<C-Tab>',   ':bnext<CR>', opts)       -- go to next buffer
+map('n', '<C-Tab>',   ':bnext<CR>', opts)     -- go to next buffer
 map('n', '<C-Right>', ':bnext<CR>', opts)
-map('n', '<C-w>',     ':bdelete<CR>', opts)     -- close current buffer
+map('n', '<C-w>',     ':bdelete<CR>', opts)   -- close current buffer
 map('n', '<C-q>',     ':bdelete<CR>', opts)
