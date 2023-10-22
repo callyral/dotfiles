@@ -20,8 +20,6 @@ antidote load
 # Oh My ZSH 
 ZSH_THEME="mh"
 
-HISTFILE=${ZDOTDIR:-~}/.zsh_history
-
 # Aliases
 #  xbps (void)
 #   xbps package install
