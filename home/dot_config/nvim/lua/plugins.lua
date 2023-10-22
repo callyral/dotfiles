@@ -20,26 +20,33 @@ require('lazy').setup({
     -- Dependencies
     { 'nvim-tree/nvim-web-devicons', lazy = true },
 
-    -- LSP
+    -- * LSP
     'neovim/nvim-lspconfig', -- LSP config
-    -- nvim-cmp
-    'hrsh7th/cmp-nvim-lsp',
-    -- 'hrsh7th/cmp-buffer',
-    -- 'hrsh7th/cmp-cmdline',
+    --  nvim-cmp
+    'hrsh7th/cmp-nvim-lsp', -- nvim-cmp LSP integration
+    --'hrsh7th/cmp-buffer',
+    --'hrsh7th/cmp-cmdline',
     'hrsh7th/cmp-path',
     'hrsh7th/nvim-cmp', -- autocompletion
-    -- code snippets
+    --  code snippets
     'dcampos/nvim-snippy',
     'dcampos/cmp-snippy',
     'honza/vim-snippets',
 
-    'dense-analysis/ale', -- code linting
-    'editorconfig/editorconfig-vim', -- support for .editorconfig
-    'preservim/nerdcommenter', -- automatic text commenter
-    'scrooloose/nerdtree', -- tree file management
-    'tmsvg/pear-tree', -- pair quotes, parentheses, html tags, etc
-    'tpope/vim-sleuth', -- indentation management
-    {'mg979/vim-visual-multi', branch = 'master'},
+    'dense-analysis/ale',            -- code linting
+    'preservim/nerdcommenter',       -- automatic text commenter
+    'tmsvg/pear-tree',               -- pair quotes, parentheses, html tags, etc
+    --'tpope/vim-sleuth',              -- indentation management
+
+    -- * mini.nvim - a bunch of tiny modules that make neovim better
+    {
+        'echasnovski/mini.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        version = false
+    },
+
+    -- * vim-visual-multi - multiple cursors and better selection
+    { 'mg979/vim-visual-multi', branch = 'master' },
 
     -- * git-related
     'lewis6991/gitsigns.nvim', -- git decorations
@@ -54,17 +61,11 @@ require('lazy').setup({
         end
     },
 
-    -- * barbar - tab/bufferline
-    {
-        'romgrk/barbar.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-
     -- * lualine - a statusline written in lua
-    {
+    --[[{
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
+    },]]
 
     -- * treesitter - better code highlighting
     {

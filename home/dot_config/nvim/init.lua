@@ -13,34 +13,14 @@ local set = vim.opt
 
 
 -- . tab .
-set.expandtab = true -- vim-sleuth
-set.shiftwidth = 4 -- vim-sleuth
-set.softtabstop = 4 -- vim-sleuth
-set.tabstop = 4 -- vim-sleuth
+set.expandtab = true 
+set.shiftwidth = 4   
+set.softtabstop = 4  
+set.tabstop = 4      
 set.wildmode = 'longest,list' -- tab completions
 
 
 -- . plugins .
--- * barbar
-require('bufferline').setup {
-    icons = {
-        button = 'x',
-        modified = {
-            button = '*'
-        },
-        pinned = {
-            button = 'v'
-        },
-        filetype = {
-            custom_colors = true
-        },
-        inactive = {
-            separator = {left = '|', right = ''}
-        },
-        separator = {left = '|', right = ''}
-    }
-}
-
 -- * cmp
 local has_words_before = function()
     unpack = unpack or table.unpack
@@ -97,19 +77,19 @@ require('gitsigns').setup {
     }
 }
 
--- * lualine
-require('lualine').setup {
-    options = {
-        theme = 'catppuccin',
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '|', right = '|' },
-    },
-}
-
 -- * treesitter
 require('nvim-treesitter.configs').setup {
-    highlight = { enable = true }
+    ensure_installed = { "bash", "c", "lua", "rust", "zig" },
+    auto_install = false,
+    highlight = { enable = true },
 }
+
+-- * mini.nvim
+require('mini.tabline').setup{}    -- a tabline
+require('mini.statusline').setup{} -- a statusline
+require('mini.comment').setup{}    -- quick commenting
+require('mini.pick').setup{}       -- pick a file, use grep, etc
+require('mini.jump2d').setup{}     -- jump to anywhere with keyboard (enter<letter>)
 
 
 -- . colorschemes .
