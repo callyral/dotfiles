@@ -6,7 +6,7 @@ kittyfetch
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -19,6 +19,8 @@ antidote load
 
 # Oh My ZSH 
 ZSH_THEME="mh"
+
+HISTFILE=${ZDOTDIR:-~}/.zsh_history
 
 # Aliases
 #  xbps (void)
@@ -40,7 +42,7 @@ alias ls='eza -a'
 alias l='eza -la'
 alias ll='eza -lah'
 #  other
-alias wipe='rm ~/.zsh_history; clear'
+alias wipe='rm $HISTFILE; clear'
 
 # Other useful things
 #  Adds colorful "help" command
