@@ -131,13 +131,17 @@ root config (unmanaged by chezmoi)
   git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
   ```
 
-- [oh my zsh](https://ohmyz.sh)
-
 - [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 - [zsh completions](https://github.com/zsh-users/zsh-completions)
 
 - [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+- [zsh abbr](https://github.com/olets/zsh-abbr)
+
+- [zsh utils](https://github.com/belak/zsh-utils)
+
+  - completion, editor and prompt
 
 ## apps
 

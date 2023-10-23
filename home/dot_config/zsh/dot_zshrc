@@ -1,50 +1,54 @@
-# Plugin management
+# . notes .
+#  abbreviations are stored in $XDG_CONFIG_HOME/zsh-abbr/zsh-abbreviations
+SU='doas' # sudo or doas (used in abbreviations)
+
+
+# . load plugins .
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-
-# The following lines were added by compinstall
-zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle :compinstall filename '$ZDOTDIR/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-bindkey -v
-
-# Plugins in .zsh_plugins.txt
 antidote load
 
-# Oh My ZSH 
-ZSH_THEME="mh"
+# . completion styling (modified compinstall) .
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle :compinstall filename '${ZDOTDIR:-~}/.zshrc'
 
-# Aliases
-#  xbps (void)
-#   xbps package install
-alias xpi='sudo xbps-install'
-#   xbps package remove
-alias xpr='sudo xbps-remove'      # remove package
-alias purge='sudo xbps-remove -R' # also remove dependencies
-#   xbps package find [local]
-alias xpfl='xbps-query -s'        # local packages
-alias xpf='xbps-query -Rs'        # looks in repo
-#   xbps package info [local]
-alias xpinfol='xbps-query -S'
-alias xpinfo='xbps-query -RS'
-#   update
-alias upd='sudo xbps-install -Su'
+zstyle ':completion:*' menu select
+autoload -Uz compinit
+compinit
+
+
+# . keybinds .
+bindkey -v
+
+
+# . plugin configuration .
+# * prompt
+#  git prompt setup
+autoload -Uz add-zsh-hook vcs_info
+setopt prompt_subst
+add-zsh-hook precmd vcs_info # run vcs_info before prompt is displayed
+#   checking for changes
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr       '%F{red}*%F{yellow}'   # %u
+zstyle ':vcs_info:*' stagedstr         '%F{green}+%F{yellow}' # %c
+#   formatting (%b -> branch)
+zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+#  prompt
+PROMPT=' %F{red}@%n %F{green}%~ %F{blue}%% %f'
+RPROMPT='%F{yellow}${vcs_info_msg_0_}%f'
+
+
+# . aliases .
 #  ls
-alias ls='eza -a'
 alias l='eza -la'
 alias ll='eza -lah'
+alias ls='eza -a'
+#  cd
+alias ..="cd .."
+alias ...="cd ../../"
 #  other
-alias wipe='rm $HISTFILE; clear'
 alias lowfetchc="lowfetch -ks -c b -b -o -a" # lowfetch configured
 
-# Startup commands
-lowfetchc
 
-# Other useful things
-#  Adds colorful "help" command
-help() {
-    "$@" --help 2>&1 | bat --plain --language=help 
-}
+# . startup .
+lowfetchc
