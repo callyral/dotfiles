@@ -38,7 +38,7 @@ alias l='eza -la'
 alias ll='eza -lah'
 #  other
 alias wipe='rm $HISTFILE; clear'
-alias lowfetchc="lowfetch -ks -c b -b -o -a | bat --style=numbers" # lowfetch configured
+alias lowfetchc="lowfetch -ks -c b -b -o -a" # lowfetch configured
 
 # Startup commands
 lowfetchc
