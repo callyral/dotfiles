@@ -86,9 +86,9 @@ root config (unmanaged by chezmoi)
 
 - modern alternative to ls
 
-[kittyfetch](https://github.com/callyral/kittyfetch)
+[lowfetch](https://github.com/callyral/lowfetch)
 
-- fetch system info (comes with free ascii cat)
+- minimal system info tool by me!
 
 [neovim](https://neovim.io)
   
@@ -104,19 +104,15 @@ root config (unmanaged by chezmoi)
 
   - greeter
 
-- [barbar](https://github.com/romgrk/barbar.nvim)
-
-  - tab/bufferline
-
 - [catppuccin](https://github.com/catppuccin/nvim)
 
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 
   - git decorations
 
-- [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [mini.nvim](https://github.com/echasnovski/mini.nvim)
 
-  - a statusline written in lua
+  - mini.tabline, mini.statusline, mini.comment, mini.pick and mini.jump2d.
 
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 

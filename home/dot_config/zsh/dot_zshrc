@@ -1,9 +1,6 @@
 # Plugin management
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
-# Startup commands
-kittyfetch
-
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle :compinstall filename '$ZDOTDIR/.zshrc'
@@ -41,6 +38,10 @@ alias l='eza -la'
 alias ll='eza -lah'
 #  other
 alias wipe='rm $HISTFILE; clear'
+alias lowfetchc="lowfetch -ks -c b -b -o -a | bat --style=numbers" # lowfetch configured
+
+# Startup commands
+lowfetchc
 
 # Other useful things
 #  Adds colorful "help" command
