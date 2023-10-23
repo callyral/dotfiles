@@ -98,7 +98,6 @@ set.background = 'dark'
 require('catppuccin').setup {
     integrations = {
         alpha = true,
-        barbar = true,
         gitsigns = true,
         treesitter = true,
     }
