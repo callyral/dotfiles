@@ -1,10 +1,10 @@
+
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 
 belak/zsh-utils path:completion
 belak/zsh-utils path:editor
-belak/zsh-utils path:prompt
 
 # fish-like abbreviations
 olets/zsh-abbr

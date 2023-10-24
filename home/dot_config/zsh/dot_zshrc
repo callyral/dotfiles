@@ -7,6 +7,7 @@ SU='doas' # sudo or doas (used in abbreviations)
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
+
 # . completion styling (modified compinstall) .
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle :compinstall filename '${ZDOTDIR:-~}/.zshrc'
@@ -49,6 +50,12 @@ alias ...="cd ../../"
 #  other
 alias lowfetchc="lowfetch -ks -c b -b -o -a" # lowfetch configured
 
+
+# . history .
+#  see more options in zshenv
+setopt HIST_IGNORE_ALL_DUPS
+setopt histignorealldups
+setopt INC_APPEND_HISTORY
 
 # . startup .
 lowfetchc
