@@ -1,6 +1,6 @@
 -- . modules .
 require('plugins')
-require('nvim_variables')
+require('options')
 require('lsp')
 require('keybinds')
 if vim.g['neovide'] then
@@ -10,14 +10,6 @@ end
 
 -- . shorthands .
 local set = vim.opt
-
-
--- . tab .
-set.expandtab = true 
-set.shiftwidth = 4   
-set.softtabstop = 4  
-set.tabstop = 4      
-set.wildmode = 'longest,list' -- tab completions
 
 
 -- . plugins .
