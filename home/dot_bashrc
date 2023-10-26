@@ -1,0 +1,33 @@
+# .bashrc
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+# . environment variables .
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+HISTFILE="$HOME/.bash_history"
+
+
+# . sources .
+. "$CARGO_HOME/env"
+
+
+# . prompt .
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+blue=$(tput setaf 4)
+reset=$(tput sgr0)
+PS1=" $red[\u] $green\W $blue$ $reset"
+
+
+# . aliases .
+#  ls
+alias ls='ls --color=auto -a'
+alias l='ls --color=auto -la'
+#  cd
+alias ..='cd ..'
+alias ...='cd ../../'
+
+# . startup .
+printf '    welcome to bash\n'
+printf '   bourne again shell\n'
