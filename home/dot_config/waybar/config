@@ -4,34 +4,10 @@
     "height": 24,
     "spacing": 4, // spacing between modules
 
-    "modules-left": ["sway/workspaces", "custom/media", "sway/mode", "sway/scratchpad", "sway/window"],
+    "modules-left": ["river/tags", "custom/media", "river/mode", "river/window"],
     "modules-center": ["clock"],
     "modules-right": ["wireplumber", "backlight", "cpu", "memory", "temperature", "battery", "battery#bat2", "tray"],
 
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false
-    },
-    // not used in my sway config
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon}  {count}",
-        "show-empty": false,
-        "format-icons": ["", " "],
-        "tooltip": true,
-        "tooltip-format": "{app} · {title}"
-    },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10

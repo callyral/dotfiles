@@ -36,7 +36,7 @@ require('lazy').setup({
     'dense-analysis/ale',            -- code linting
     'preservim/nerdcommenter',       -- automatic text commenter
     'tmsvg/pear-tree',               -- pair quotes, parentheses, html tags, etc
-    --'tpope/vim-sleuth',              -- indentation management
+    'tpope/vim-sleuth',              -- indentation management
 
     -- * mini.nvim - a bunch of tiny modules that make neovim better
     {

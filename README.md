@@ -32,11 +32,9 @@ root config (unmanaged by chezmoi)
 
 - enter the void
 
-[sway](https://swaywm.org)
+[river](https://github.com/riverwm/river)
 
-- i3-compatible wlroots window manager
-
-- [hyprpicker](https://github.com/hyprwm/hyprpicker)
+- dynamic wayland tiling compositor
 
 - [swayidle](https://github.com/swaywm/swayidle)
 
