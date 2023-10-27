@@ -219,4 +219,4 @@ root config (unmanaged by chezmoi)
 
 made by me using [krita](https://krita.org)
 
-![A Catppuccin-themed wallpaper with GLaDOS and an Aperture Science logo](home/dot_config/wallpaper.png)
+![wallpaper](home/dot_config/wallpaper.png)
