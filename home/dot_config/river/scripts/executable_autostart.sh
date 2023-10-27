@@ -7,9 +7,9 @@ waybar &
 
 pgrep dunst || dunst &
 
-pgrep nm-applet || nm-applet &
-pgrep copyq || copyq &
-pgrep gammastep || gammastep-indicator -m wayland &
+nm-applet &
+copyq &
+gammastep-indicator -m wayland &
 
 gsettings set org.gnome.desktop.interface icon-theme "Tela-circle-purple-dark" &
 gsettings set org.gnome.desktop.interface cursor-theme "Catppuccin-Macchiato-Peach-Cursors" &
