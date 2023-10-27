@@ -1,6 +1,6 @@
 #!/bin/sh
-pgrep -x pipewire || pipewire &
-pgrep -x pipewire-pulse || pipewire-pulse &
+pipewire &
+pipewire-pulse &
 pgrep wireplumber || wireplumber &
 
 waybar &
