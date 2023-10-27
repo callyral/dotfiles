@@ -96,7 +96,7 @@ riverctl map normal $mod Return spawn "$term"
 #  web browser
 riverctl map normal $mod F spawn "$web_browser"
 #  file manager
-riverctl map normal $mod+Shift Return "$file_manager"
+riverctl map normal $mod+Shift Return spawn "$file_manager"
 #  screenshots
 riverctl map normal $mod Z spawn "$screenshot_full"
 riverctl map normal $mod+Shift Z spawn "$screenshot_copy_full"
