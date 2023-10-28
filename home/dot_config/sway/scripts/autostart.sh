@@ -5,6 +5,8 @@ pgrep wireplumber || wireplumber &
 
 pgrep dunst || dunst &
 
+pgrep autotiling || pkill autotiling && autotiling -l 2
+
 nm-applet &
 copyq &
 gammastep-indicator -m wayland &
