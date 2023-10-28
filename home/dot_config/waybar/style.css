@@ -39,38 +39,39 @@ button:hover {
     box-shadow: inset 0 -2px transparent;
 }
 
-#tags button {
-    padding: 0 3px;
+/* workspaces (buttons) */
+#workspaces button {
+    padding: 0 5px;
     background-color: transparent;
-    color: @surface2;
+    color: @text;
     transition-property: background-color, color, box-shadow;
     transition-duration: .2s;
 }
-#tags button:hover {
+#workspaces button:hover {
     background: @surface0;
 }
-#tags button.occupied {
-    color: @text;
-}
-#tags button.focused {
+#workspaces button.focused {
     background: @surface0;
     color: @peach;
     box-shadow: inset 0 -2px @peach;
 }
-#tags button.urgent {
+#workspaces button.urgent {
     background-color: @red;
     color: @base;
 }
-.modules-left > widget:first-child > #tags {
+/* -- if workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
-.modules-right > widget:last-child > #tags {
+/* -- if workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
+/* sway/mode */
 #mode {
-    background-color: @surface0;
-    border-bottom: 2px solid @maroon;
+    background-color: @surface2;
+    border-bottom: 3px solid @maroon;
     color: @text;
 }
 
