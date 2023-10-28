@@ -3,6 +3,9 @@
     "position": "top", // edge of the screen
     "height": 24,
     "spacing": 4, // spacing between modules
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
 
     "modules-left": ["sway/workspaces", "custom/media", "sway/mode", "sway/scratchpad", "sway/window"],
     "modules-center": ["clock"],
