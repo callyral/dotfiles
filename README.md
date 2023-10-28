@@ -36,6 +36,8 @@ root config (unmanaged by chezmoi)
 
 - dynamic wayland tiling compositor
 
+- [rivertile](https://github.com/riverwm/river)
+
 - [swayidle](https://github.com/swaywm/swayidle)
 
 - [swaylock](https://github.com/swaywm/swaylock)
