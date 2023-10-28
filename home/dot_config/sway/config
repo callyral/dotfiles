@@ -53,13 +53,13 @@ bar {
 }
 
 
-# . xwayland and fx .
+# . xwayland .
 xwayland enable
-corner_radius 6
 
 
 # . window styles .
 #  border
+corner_radius 6
 default_border pixel 2
 default_floating_border pixel 2 
 #  gaps
@@ -72,7 +72,7 @@ smart_gaps off
 #  wallpaper
 output * bg ~/.config/wallpaper.png fill
 #  resolution
-#>  you can get the names of your outputs by running: swaymsg -t get_outputs
+#> run `swaymsg -t get_outputs` to get output names.
 output eDP-1 resolution 1920x1080 position 0,0
 
 
@@ -83,161 +83,147 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 000000'
 
 
-# Read `man 5 sway-input` for more information about this section.
 # . input methods .
+#> read `man 5 sway-input` for more information about this section.
 #  keyboard
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout br
     xkb_model abnt2
     xkb_options compose:lctrl-altgr
 }
+input "type:keyboard" {
+    repeat_delay 400
+    repeat_rate 30
+}
 #  mouse and touchpad 
 focus_follows_mouse no
-input "1133:16465:Logitech_M510" {
+input "type:pointer" {
     accel_profile flat
 }
 input "type:touchpad" {
     # disable while typing
     dwt enabled
-
     # tap to click
     tap enabled
-
     natural_scroll enabled
 }
 
 
 # . user keybinds .
 #  brightness
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 #  volume
-    bindsym --locked XF86AudioMute exec $mute
-    bindsym --locked XF86AudioLowerVolume exec $vol_lower
-    bindsym --locked XF86AudioRaiseVolume exec $vol_raise 
-#  user apps 
-    bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec $files
-    bindsym $mod+f exec $web
+bindsym --locked XF86AudioMute exec $mute
+bindsym --locked XF86AudioLowerVolume exec $vol_lower
+bindsym --locked XF86AudioRaiseVolume exec $vol_raise 
+#  user apps
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $files
+bindsym $mod+f exec $web
 #  screenshots
-    bindsym $mod+z exec $shot_full
-    bindsym $mod+Shift+z exec $shot_full_copy
-    bindsym $mod+Shift+s exec $shot_sel_copy
-    bindsym $mod+c exec $color_picker
+bindsym $mod+z exec $shot_full
+bindsym $mod+Shift+z exec $shot_full_copy
+bindsym $mod+Shift+s exec $shot_sel_copy
+bindsym $mod+c exec $color_picker
 #  launcher/menu
-    bindsym $mod+Shift+d exec $menu
-    bindsym $mod+d exec $cmd_menu
-    bindsym $mod+Period exec $emoji 
+bindsym $mod+Shift+d exec $menu
+bindsym $mod+d exec $cmd_menu
+bindsym $mod+Period exec $emoji 
+
 
 # . sway keybinds .
 #  basics
-    # Kill focused window
-    bindsym $mod+Shift+q kill
-
-    # normal:
-    #  left -> move
-    #  right -> resize
-    # inverse:
-    #  left -> resize
-    #  right -> move
-    floating_modifier $mod normal
-
-    # reload sway config
-    bindsym $mod+Shift+r reload
-
-    # exit sway 
-    bindsym $mod+Shift+e exec swaymsg exit
-
-    # lock
-    bindsym $mod+Shift+m exec swaylock -f -c 000000
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+#> normal:
+#>  left -> move
+#>  right -> resize
+#> inverse:
+#>  left -> resize
+#>  right -> move
+floating_modifier $mod normal
+#   reload sway config
+bindsym $mod+Shift+r reload
+#   exit sway 
+bindsym $mod+Shift+e exec swaymsg exit
+#   lock
+bindsym $mod+Shift+m exec swaylock -f -c 000000
 #  moving around
-    # move your focus
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    #  arrow keys
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
-
-    # move the focused window
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    #  arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+#   move your focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+#----arrow keys
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+#   move the focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+#----arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 #  resizing
-    bindsym $mod+$alt+$left resize shrink width 10px
-    bindsym $mod+$alt+$down resize grow height 10px
-    bindsym $mod+$alt+$up resize shrink height 10px
-    bindsym $mod+$alt+$right resize grow width 10px
-    #  arrow keys
-    bindsym $mod+$alt+Left resize shrink width 10px
-    bindsym $mod+$alt+Down resize grow height 10px
-    bindsym $mod+$alt+Up resize shrink height 10px
-    bindsym $mod+$alt+Right resize grow width 10px
+bindsym $mod+$alt+$left resize shrink width 10px
+bindsym $mod+$alt+$down resize grow height 10px
+bindsym $mod+$alt+$up resize shrink height 10px
+bindsym $mod+$alt+$right resize grow width 10px
+#   arrow keys
+bindsym $mod+$alt+Left resize shrink width 10px
+bindsym $mod+$alt+Down resize grow height 10px
+bindsym $mod+$alt+Up resize shrink height 10px
+bindsym $mod+$alt+Right resize grow width 10px
 #  workspaces
-    # switch to workspace n
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
-    # move focused window to workspace n
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+#   switch to workspace n
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+#   move focused window to workspace n
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 #  layout
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
-
-    # change layout of the current workspace
-    #  stacking and tabbed commented out since i don't use them.
-    bindsym $mod+e layout toggle split
-    #bindsym $mod+s layout stacking
-    #bindsym $mod+w layout tabbed
-
-    # fullscreen the focused window
-    bindsym $mod+Shift+f fullscreen
-
-    # toggle the focused window between floating and tiled
-    bindsym $mod+Shift+space floating toggle
-
-    # swap focus between tiling and floating areas
-    bindsym $mod+space focus mode_toggle
-
-    # focus the parent container (all visible windows)
-    bindsym $mod+a focus parent
+#> You can "split" the current object of your focus with
+#> $mod+b or $mod+v, for horizontal and vertical splits
+#> respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
+#  fullscreen the focused window
+bindsym $mod+Shift+f fullscreen
+#  toggle focused window floating
+bindsym $mod+Shift+space floating toggle
+#  swap focus between tiling and floating areas
+bindsym $mod+space focus mode_toggle
+#  focus the parent container (all visible windows)
+bindsym $mod+a focus parent
 #  scratchpad
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
-    # move the focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+#> sway has a "scratchpad", which is a bag of holding for windows.
+#> you can send windows there and get them back later.
+#   move the focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+#   show the next scratchpad window or hide the focused scratchpad window.
+#>  If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
 
 include /etc/sway/config.d/*
