@@ -32,9 +32,9 @@ root config (unmanaged by chezmoi)
 
 - enter the void
 
-[sway](https://swaywm.org)
+[swayfx](https://github.com/WillPower3309/swayfx)
 
-- i3-compatible wlroots window manager
+- i3-compatible wlroots window manager with eye-candy
 
 - [autotiling](https://github.com/nwg-piotr/autotiling)
 

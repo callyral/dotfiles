@@ -53,8 +53,9 @@ bar {
 }
 
 
-# . xwayland .
+# . xwayland and fx .
 xwayland enable
+corner_radius 10
 
 
 # . window styles .
