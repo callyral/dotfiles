@@ -62,9 +62,9 @@ xwayland enable
 default_border pixel 2
 default_floating_border pixel 2 
 #  gaps
-gaps inner 2
-gaps outer 3
-smart_gaps on
+gaps inner 4
+gaps outer 6
+smart_gaps off
 
 
 # . display .
@@ -132,8 +132,6 @@ input "type:touchpad" {
 #  basics
     # Kill focused window
     bindsym $mod+Shift+q kill
-
-    # Start your launcher
 
     # normal:
     #  left -> move

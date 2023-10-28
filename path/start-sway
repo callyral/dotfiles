@@ -22,5 +22,5 @@ export ICON_THEME=Tela-circle-purple-dark
 export XCURSOR_THEME=Catppuccin-Macchiato-Peach-Cursors
 
 # One of these should work
-#dbus-run-session sway
-sway
+dbus-run-session sway
+#sway

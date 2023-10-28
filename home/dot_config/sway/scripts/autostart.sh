@@ -1,18 +1,14 @@
 #!/bin/sh
-lxpolkit &
 pipewire &
 pipewire-pulse &
 pgrep wireplumber || wireplumber &
 
-#waybar & # in sway config
+pgrep dunst || dunst &
 
 nm-applet &
 copyq &
 gammastep-indicator -m wayland &
 
-mpd --no-daemon $HOME/.config/mpd/mpd.conf &
-
-#pgrep OpenTabletDrive || otd-daemon &
-
 gsettings set org.gnome.desktop.interface icon-theme "Tela-circle-purple-dark" &
+gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Macchiato-Standard-Peach-Dark" &
 gsettings set org.gnome.desktop.interface cursor-theme "Catppuccin-Macchiato-Peach-Cursors" &
