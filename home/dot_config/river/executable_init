@@ -1,21 +1,8 @@
 #!/bin/sh
 
-# . environment variables .
-#  XDG_RUNTIME_DIR is set by elogind
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_STATE_HOME=$HOME/.local/state
-
-export XDG_CURRENT_DESKTOP=river
-export XDG_DESSION_DESKTOP=river
-export XDG_SESSION_TYPE=wayland
-
-export MOZ_ENABLE_WAYLAND=1
-
 
 # . startup .
-riverctl spawn "$XDG_CONFIG_HOME/river/scripts/autostart.sh"
+riverctl spawn "sh $XDG_CONFIG_HOME/river/scripts/autostart.sh"
 
 
 # . colors .
