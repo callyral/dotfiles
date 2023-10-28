@@ -6,7 +6,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 export XDG_CURRENT_DESKTOP=sway
-export XDG_DESSION_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
 # Firefox and Thunderbird wayland support
