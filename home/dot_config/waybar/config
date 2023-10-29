@@ -111,7 +111,7 @@
         "smooth-scrolling-threshold": 10,
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
-        "exec": "$XDG_CONFIG_HOME/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$XDG_CONFIG_HOME/waybar/scripts/mediaplayer.py 2> /dev/null"
     },
 }
 
