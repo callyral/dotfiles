@@ -32,6 +32,9 @@ window#waybar {
     transition-duration: .5s;
     border-radius: 9999px;
 }
+#window {
+    margin: 0 5px;
+}
 
 
 /* .buttons. */
@@ -127,6 +130,11 @@ button {
 }
 
 /* .color of each colorful text module. */
+#mode {
+    color: @overlay0;
+    margin: 0 5px;
+}
+
 #backlight {
     color: @peach;
 }
@@ -180,7 +188,7 @@ button {
 }
 
 #custom-media {
-    padding: 0 10px;
+    margin: 0 5px;
     color: @overlay1;
 }
 

@@ -21,7 +21,7 @@
         "warp-on-scroll": false
     },
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "<span>{}</span>"
     },
     "sway/scratchpad": {
         "format": "{icon}  {count}",

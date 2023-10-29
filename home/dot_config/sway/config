@@ -18,5 +18,6 @@ include {
     "modules/appearance"
     "modules/keybinds-user"
     "modules/keybinds-sway"
+    "modules/modes"
     "modules/xwayland"
 }

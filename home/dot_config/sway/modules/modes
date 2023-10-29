@@ -1,0 +1,5 @@
+# useful for testing wayland environments inside sway
+mode "passthrough" {
+    bindsym $mod+F11 mode "default"
+}
+bindsym $mod+F11 mode "passthrough"
