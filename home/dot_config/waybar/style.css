@@ -1,12 +1,15 @@
 @import "macchiato.css";
 
+
+/* .all. */
 * {
     /* FontAwesome is required for icons */
     font-family: FontAwesome, "Liberation Sans", "Noto Sans", sans-serif;
     font-size: 13px;
 }
 
-/* tooltips */
+
+/* .tooltips. */
 tooltip {
     background-color: @base;
 }
@@ -14,11 +17,14 @@ tooltip label {
     color: @text;
 }
 
+
+/* .label. */
 label:focus {
     background-color: @crust;
 }
 
-/* waybar window */
+
+/* .waybar. */
 window#waybar {
     background-color: @crust;
     color: @text;
@@ -26,20 +32,18 @@ window#waybar {
     transition-duration: .5s;
     border-radius: 9999px;
 }
-/* Buttons */
+
+
+/* .buttons. */
 button {
     box-shadow: inset 0 -2px transparent;
     /* avoid rounded borders under each button name */
     border: none;
-    border-radius: 0;
-}
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -2px transparent;
+    border-radius: 9999px;
 }
 
-/* workspaces */
+
+/* .workspaces. */
 #workspaces button {
     background-color: transparent;
     color: @text;
@@ -55,7 +59,6 @@ button:hover {
 #workspaces button.focused {
     background: @peach;
     color: @base;
-    /*box-shadow: inset 0 -2px @peach;*/
 }
 #workspaces button.urgent {
     background-color: @red;
@@ -70,14 +73,8 @@ button:hover {
     margin-right: 0;
 }
 
-/* mode */
-#mode {
-    background-color: @overlay0;
-    border-bottom: 2px solid @maroon;
-    color: @text;
-}
 
-/* rightmost modules */
+/* .colorful text. */
 #battery,
 #cpu,
 #memory,
@@ -87,7 +84,8 @@ button:hover {
 #wireplumber,
 #pulseaudio,
 #network,
-#mpd {
+#mpd,
+#mode {
     padding: 0 5px;
     font-weight: bold;
     background-color: @crust;
@@ -95,7 +93,8 @@ button:hover {
     transition-duration: .3s;
 }
 
-/* text-ish modules */
+
+/* .not colorful. */
 #clock,
 #idle_inhibitor,
 #mode,
@@ -104,18 +103,20 @@ button:hover {
     color: @text;
 }
 
-/* scratchpad */
+
+/* .sway scratchpad. */
 #scratchpad {
     padding: 0 10px;
     color: @peach;
 }
 
-/* clock */
+
+/* .clock. */
 #clock {
     font-weight: bold;
 }
 
-/* wireplumber/pulseaudio */
+/* .wireplumber and pulseaudio. */
 #pulseaudio,
 #wireplumber {
     color: @red;
@@ -125,22 +126,19 @@ button:hover {
     font-weight: normal;
 }
 
-/* backlight */
+/* .color of each colorful text module. */
 #backlight {
     color: @peach;
 }
 
-/* cpu */
 #cpu {
     color: @yellow;
 }
 
-/* memory */
 #memory {
     color: @teal;
 }
 
-/* temperature */
 #temperature {
     color: @blue;
 }
@@ -148,7 +146,6 @@ button:hover {
     color: @red;
 }
 
-/* battery */
 #battery {
     color: @mauve;
 }
@@ -171,7 +168,6 @@ button:hover {
     animation-direction: alternate;
 }
 
-/* tray */
 #tray {
     margin: 0 4px;
 }
@@ -183,13 +179,12 @@ button:hover {
     background-color: @red;
 }
 
-/* custom-media (custom/media) */
 #custom-media {
     padding: 0 10px;
     color: @overlay1;
 }
 
-/* idle_inhibidor (unused) */
+/* (unused) */
 #idle_inhibitor {
     background-color: @surface0;
 }
@@ -197,12 +192,12 @@ button:hover {
     background-color: @surface1;
 }
 
-/* disk (unused) */
+/* (unused) */
 #disk {
     color: @blue;
 }
 
-/* network (unused) */
+/* (unused) */
 #network {
     color: @lavender;
 }
@@ -210,56 +205,3 @@ button:hover {
     color: @overlay0;
     color: @text;
 }
-
-/* commented out since they are unused and unthemed
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-#custom-media.custom-spotify {
-    background-color: @green;
-    color: @base;
-}
-#custom-media.custom-vlc {
-    background-color: @peach;
-    color: @base;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-#keyboard-state > label {
-    padding: 0 5px;
-}
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-*/
