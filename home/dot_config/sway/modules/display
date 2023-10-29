@@ -1,0 +1,11 @@
+# . display .
+#  wallpaper
+output * bg ~/.config/wallpaper.png fill
+#  resolution
+#> run `swaymsg -t get_outputs` to get output names.
+output eDP-1 resolution 1920x1080 position 0,0
+#  idle
+exec swayidle -w \
+         timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         timeout 600 'swaylock -f -c 000000' \
+         before-sleep 'swaylock -f -c 000000'

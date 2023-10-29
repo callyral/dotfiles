@@ -1,0 +1,18 @@
+# . color scheme .
+include catppuccin-macchiato
+# target                 title     bg    text   indicator border
+client.focused           $lavender $base $text  $peach    $peach
+client.focused_inactive  $overlay0 $base $text  $overlay0 $overlay0
+client.unfocused         $overlay0 $base $text  $overlay0 $overlay0
+client.urgent            $peach    $base $peach $overlay0 $maroon
+
+
+# . window styles .
+#  border
+corner_radius 6
+default_border pixel 2
+default_floating_border pixel 2 
+#  gaps
+gaps inner 4
+gaps outer 6
+smart_gaps off

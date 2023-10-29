@@ -1,0 +1,36 @@
+# . modifier keys .
+set $mod Mod4
+set $alt Mod1
+
+
+# . vim like keys .
+set {
+    $left h
+    $down j
+    $up k
+    $right l
+}
+
+
+# . programs .
+set {
+    #  terminal
+    $term footclient
+    #  launcher/menu
+    $menu wofi --show drun --allow-images | xargs swaymsg exec --
+    $cmd_menu wofi --show run | xargs swaymsg exec --
+    $emoji wofi-emoji
+    #  web browser
+    $web firefox
+    #  file manager
+    $files pcmanfm
+    #  screenshots 
+    $shot_full sh ../scripts/screenshot.sh full  
+    $shot_full_copy sh ../scripts/screenshot.sh full-copy
+    $shot_sel_copy sh ../scripts/screenshot.sh sel-copy
+    $color_picker hyprpicker -na
+    #  volume control
+    $mute wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    $vol_lower wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- -l 1.2
+    $vol_raise wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ -l 1.2
+}

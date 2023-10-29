@@ -1,0 +1,25 @@
+# read `man 5 sway-input` for more information about this file.
+
+# . input config .
+#  keyboard
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout br
+    xkb_model abnt2
+}
+input "type:keyboard" {
+    xkb_options compose:lctrl-altgr
+    repeat_delay 400
+    repeat_rate 30
+}
+#  mouse and touchpad 
+focus_follows_mouse no
+input "type:pointer" {
+    accel_profile flat
+}
+input "type:touchpad" {
+    # disable while typing
+    dwt enabled
+    # tap to click
+    tap enabled
+    natural_scroll enabled
+}
