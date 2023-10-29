@@ -42,23 +42,23 @@
 }
 
 #window {
-    background: @base;
+    background: @mantle;
     margin: auto;
     padding: 5px;
-    border-radius: 0;
+    border-radius: 6px;
     border: 2px solid @overlay0;
 }
 
 #input {
     padding: 5px;
     margin-bottom: 10px;
-    border-radius: 0;
+    border-radius: 6px;
     background-color: transparent;
     color: @text;
 }
 
 #outer-box {
-    padding: 5px;
+    padding: 10px;
 }
 
 #img {
@@ -67,7 +67,7 @@
 
 #entry {
     padding: 4px;
-    border-radius: 0;
+    border-radius: 6px;
 }
 #entry:selected {
     background-color: @surface0;
