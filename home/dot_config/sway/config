@@ -1,7 +1,7 @@
 # . startup .
 exec dbus-update-activation-environment --all
 exec foot -s
-exec sh $XDG_CONFIG_HOME/sway/scripts/autostart.sh
+exec $XDG_CONFIG_HOME/sway/scripts/autostart.sh
 
 
 # . bar .

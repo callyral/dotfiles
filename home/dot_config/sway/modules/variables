@@ -25,9 +25,9 @@ set {
     #  file manager
     $files pcmanfm
     #  screenshots 
-    $shot_full sh ../scripts/screenshot.sh full  
-    $shot_full_copy sh ../scripts/screenshot.sh full-copy
-    $shot_sel_copy sh ../scripts/screenshot.sh sel-copy
+    $shot_full sh $XDG_CONFIG_HOME/sway/scripts/screenshot.sh full  
+    $shot_full_copy sh $XDG_CONFIG_HOME/sway/scripts/screenshot.sh full-copy
+    $shot_sel_copy sh $XDG_CONFIG_HOME/sway/scripts/screenshot.sh sel-copy
     $color_picker hyprpicker -na
     #  volume control
     $mute wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
