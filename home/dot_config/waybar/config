@@ -1,8 +1,12 @@
 {
-    "layer": "top", // whether to be on top of windows or below
-    "position": "top", // edge of the screen
+    // whether to be on top or below the windows
+    "layer": "top", 
+    // waybar's edge of the screen
+    "position": "top",
     "height": 24,
-    "spacing": 4, // spacing between modules
+    // spacing between modules
+    "spacing": 4,
+    // margin around waybar
     "margin-top": 4,
     "margin-left": 4,
     "margin-right": 4,
@@ -16,7 +20,6 @@
         "all-outputs": true,
         "warp-on-scroll": false
     },
-    // not used in my sway config
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -35,34 +38,39 @@
             "deactivated": " "
         }
     },
+
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 19,
         "spacing": 10
     },
+
     "clock": {
         "format": "{:%H:%M · %Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%H:%M}"
     },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
+
     "memory": {
         "format": "{}% "
     },
+
     "temperature": {
-        // "thermal-zone": 2, // thermal zone, as in /sys/class/thermal/
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", // alt. path to temperature file (not /sys/class/thermal/)
-        "critical-threshold": 80, // critical temperature! (celsius) 
+        // thermal zone, as in /sys/class/thermal/
+        //"thermal-zone": 2,
+        // alternative path to temperature file (not /sys/class/thermal/)
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", 
+        // critical temperature in celsius
+        "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
 
     "backlight": {
-        // choose your device, auto-detection works for me.
-        // "device": "acpi_video1",
-        // "device": "intel_backlight",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -73,13 +81,14 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}%  ",
         "format-icons": [" ", " ", " ", " ", " "]
     },
     "battery#bat2": {
-        "bat": "BAT2" // battery, as in /sys/class/power_supply/
+        // battery, as in /sys/class/power_supply/
+        "bat": "BAT2" 
     },
 
     "wireplumber": {
@@ -99,54 +108,10 @@
         "max-length": 40,
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl stop",
-        "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+        "smooth-scrolling-threshold": 10,
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$XDG_CONFIG_HOME/waybar/mediaplayer.py 2> /dev/null"
     },
-
-    /*
-     commented out since i don't use these
-     *
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    */
 }
 
