@@ -2,11 +2,6 @@
 (local keymap vim.keymap.set)
 (local map-opts {:noremap true :silent true})
 (set vim.g.mapleader " ")
-;;; lsp keybinds
-(keymap :n :<space>e vim.diagnostic.open_float map-opts)
-(keymap :n :<space>q vim.diagnostic.setloclist map-opts)
-(keymap :n "[d" vim.diagnostic.goto_prev map-opts)
-(keymap :n "]d" vim.diagnostic.goto_next map-opts)
 ;;; normal mode
 (keymap :n :<C-s> ::w<CR> map-opts)    ; save with ctrl+s
 (keymap :n :<Esc> ::noh<Esc> map-opts) ; remove highlights with esc
