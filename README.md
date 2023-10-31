@@ -8,6 +8,8 @@ these are my dotfiles :3
 
 - make sure you have the necessary software listed in this README
 
+- the README also contains some specifications, please read it!
+
 ### step two: 
 
 root config (unmanaged by chezmoi)
@@ -94,27 +96,39 @@ root config (unmanaged by chezmoi)
 
 [neovim](https://neovim.io)
   
-- vim-based text editor
+- configured with [fennel](https://fennel-lang.org)
 
-- this list contains the more major plugins. see [plugins.lua](home/dot_config/nvim/lua/executable_plugins.lua)
+- uses the [paq-nvim](https://github.com/savq/paq-nvim) package manager
 
-- [ale](https://github.com/dense-analysis/ale)
+  ```bash
+  # install paq-nvim:
+  git clone --depth=1 https://github.com/savq/paq-nvim.git \
+      "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
+  ```
 
-  - code linting
+- then, run `:PaqInstall` in neovim
 
-- [alpha](https://github.com/goolord/alpha-nvim)
+- this list does not contain all my plugins, see [plugin_install.fnl](home/dot_config/nvim/fnl/plugin_install.fnl)
+
+- [alpha-nvim](https://github.com/goolord/alpha-nvim)
 
   - greeter
 
 - [catppuccin](https://github.com/catppuccin/nvim)
 
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [coq_nvim](https://github.com/ms-jpq/coq_nvim)
 
-  - git decorations
+  - really fast completion
+
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
 
-  - mini.tabline, mini.statusline, mini.comment, mini.pick and mini.jump2d.
+  - mini.tabline, mini.statusline, mini.comment, mini.pick and mini.jump2d
+
+- [tangerine.nvim](https://github.com/udayvir-singh/tangerine.nvim)
+
+  - add easy fennel support to neovim config
 
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
@@ -124,9 +138,7 @@ root config (unmanaged by chezmoi)
 
 - zsh, an interactive shell
 
-- [antidote](https://getantidote.github.io)
-
-  - [requires installation](https://getantidote.github.io/install)
+- uses the [antidote](https://getantidote.github.io) plugin manager
 
   ```bash
   # first, run this from an interactive zsh terminal session:
