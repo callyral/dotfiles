@@ -21,9 +21,15 @@
 ;;; colorscheme
 (set vim.opt.background :dark)
 ((. (require :catppuccin) :setup)
-  {:integrations {:alpha true :gitsigns true :treesitter true}}
-)
+  {:integrations {:alpha true :gitsigns true :treesitter true}})
 (vim.cmd "colorscheme catppuccin-macchiato")
+
+;;; mason
+((. (require :mason) :setup)
+  {:PATH :skip ; don't modify $PATH
+    :ui {:icons {:package_installed :i :package_pending "~" :package_uninstalled :X}}})
+((. (require :mason-lspconfig) :setup)
+  {:automatic_installation true})
 
 ;;; lsp config
 ;; lspconfig

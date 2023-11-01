@@ -9,11 +9,15 @@
   :udayvir-singh/tangerine.nvim
 	;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
 
+  ;; manage lsp servers
+  :williamboman/mason.nvim
+  :williamboman/mason-lspconfig.nvim ; lspconfig support
+
   ;; lsp
   :neovim/nvim-lspconfig
   {1 :ms-jpq/coq_nvim :branch :coq} ; autocompletion
   {1 :ms-jpq/coq.artifacts :branch :artifacts} ; snippets
-  
+
   :tmsvg/pear-tree
 
   {1 :echasnovski/mini.nvim :branch :stable}
@@ -31,5 +35,4 @@
   :goolord/alpha-nvim
 
   ;; colorscheme
-  {1 :catppuccin/nvim :as :catppuccin}
-])
+  {1 :catppuccin/nvim :as :catppuccin}])
