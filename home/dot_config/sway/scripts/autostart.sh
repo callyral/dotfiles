@@ -22,4 +22,4 @@ gsettings set org.gnome.desktop.interface cursor-theme "Catppuccin-Macchiato-Pea
 
 
 # . layout .
-pgrep autotiling || pkill autotiling && autotiling -l 2
+pkill autotiling; autotiling -l 2 &
