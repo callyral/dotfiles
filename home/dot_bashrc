@@ -5,7 +5,8 @@
 
 # . environment variables .
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-HISTFILE="$HOME/.bash_history"
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
 
 
 # . sources .
