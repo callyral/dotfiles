@@ -8,18 +8,22 @@
 ((. (require :tidy) :setup) {
   :opts {:filetype_exclude [:diff]}})
 
-;; underline current word
+;; underline cursor word
 ((. (require :stcursorword) :setup)
   {:excluded {:filetypes [:alpha]
-              :buftypes  [:nofile :terminal]}})
+              :buftypes  [:help :nofile :terminal]}})
 
-;; mini.nvim
+;; tabline/bufferline, statusline, etc
 ((. (require :mini.tabline) :setup) {
   :show_icons false})
 ((. (require :mini.statusline) :setup) {
   :set_vim_settings false})
-((. (require :mini.comment) :setup) {})
-((. (require :mini.jump2d) :setup) {})
+((. (require :mini.comment)    :setup) {})
+((. (require :mini.jump2d)     :setup) {}) ; navigate around a file
+((. (require :mini.pairs)      :setup) {})
+
+;; auto indent size (does not override .editorconfig)
+((. (require :guess-indent) :setup) {})
 
 ;; git
 ((. (require :gitsigns) :setup)
@@ -41,7 +45,7 @@
 ;; mason
 ((. (require :mason) :setup)
   {:PATH :skip ; don't modify $PATH
-    :ui {:icons {:package_installed :i :package_pending "~" :package_uninstalled :X}}})
+   :ui {:icons {:package_installed :i :package_pending "~" :package_uninstalled :X}}})
 ((. (require :mason-lspconfig) :setup)
   {:automatic_installation true})
 ;; lspconfig
