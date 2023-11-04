@@ -1,6 +1,6 @@
 {
     // whether to be on top or below the windows
-    "layer": "top", 
+    "layer": "top",
     // waybar's edge of the screen
     "position": "top",
     "height": 24,
@@ -61,9 +61,9 @@
 
     "temperature": {
         // thermal zone, as in /sys/class/thermal/
-        //"thermal-zone": 2,
+        "thermal-zone": 0,
         // alternative path to temperature file (not /sys/class/thermal/)
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", 
+        //"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         // critical temperature in celsius
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
@@ -88,7 +88,7 @@
     },
     "battery#bat2": {
         // battery, as in /sys/class/power_supply/
-        "bat": "BAT2" 
+        "bat": "BAT2"
     },
 
     "wireplumber": {
@@ -97,7 +97,7 @@
         "on-click": "pavucontrol",
         "format-icons": ["", "", ""]
     },
-    
+
     "custom/media": {
         "format": "{icon}{}",
         "format-icons": {
@@ -114,4 +114,3 @@
         "exec": "$XDG_CONFIG_HOME/waybar/scripts/mediaplayer.py 2> /dev/null"
     },
 }
-
