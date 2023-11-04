@@ -9,21 +9,15 @@
   :udayvir-singh/tangerine.nvim
 	;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
 
-  ;; manage lsp servers
-  :williamboman/mason.nvim
-  :williamboman/mason-lspconfig.nvim ; lspconfig support
-
-  ;; lsp
-  :neovim/nvim-lspconfig
-  {1 :ms-jpq/coq_nvim :branch :coq} ; autocompletion
-  {1 :ms-jpq/coq.artifacts :branch :artifacts} ; snippets
-
-  :tmsvg/pear-tree
-
-  {1 :echasnovski/mini.nvim :branch :stable}
-
+  ;; quality-of-life
+  :mcauley-penney/tidy.nvim ; trim trailing whitespace
+  :sontungexpt/stcursorword
+  :tmsvg/pear-tree          ; pair brackets
+  :tpope/vim-sleuth         ; automatic tab size
+  {1 :echasnovski/mini.nvim  :branch :stable}
   {1 :mg979/vim-visual-multi :branch :master}
 
+  ;; git
   :lewis6991/gitsigns.nvim
   :tpope/vim-fugitive
 
@@ -33,6 +27,13 @@
 
   ;; greeter
   :goolord/alpha-nvim
+
+  ;; lsp
+  :williamboman/mason.nvim                     ; manage lsp servers
+  :williamboman/mason-lspconfig.nvim           ; lspconfig support
+  :neovim/nvim-lspconfig                       ;
+  {1 :ms-jpq/coq_nvim :branch :coq}            ; autocompletion
+  {1 :ms-jpq/coq.artifacts :branch :artifacts} ; code snippets
 
   ;; colorscheme
   {1 :catppuccin/nvim :as :catppuccin}])
