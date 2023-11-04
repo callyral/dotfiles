@@ -16,7 +16,7 @@
 ;; appearance
 (set vopt.cmdheight 2)
 (set vopt.list true)
-(set vopt.listchars :trail:·)
+(set vopt.listchars "trail:·,tab:» ")
 (set vopt.showmatch true)
 (set vopt.showmode false)
 (set vopt.termguicolors true)
