@@ -1,4 +1,3 @@
-;;;; key binds
 (local keymap vim.keymap.set)
 (local map-opts {:noremap true :silent true})
 (set vim.g.mapleader " ")

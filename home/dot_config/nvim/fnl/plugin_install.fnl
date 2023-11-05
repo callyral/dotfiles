@@ -10,12 +10,13 @@
   ;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
 
   ;; quality-of-life
-  :mcauley-penney/tidy.nvim  ; trim trailing whitespace
   :sontungexpt/stcursorword  ; underline cursor word
-  ;:tmsvg/pear-tree          ; pair brackets
   :NMAC427/guess-indent.nvim ; automatic indent size
   :echasnovski/mini.nvim     ; many useful modules that improve neovim
   :mg979/vim-visual-multi    ; multiple cursors (vimscript)
+
+  ;; code style
+  :mcauley-penney/tidy.nvim  ; trim trailing whitespace
 
   ;; git
   :lewis6991/gitsigns.nvim
