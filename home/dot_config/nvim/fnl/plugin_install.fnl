@@ -25,9 +25,6 @@
   {1 :nvim-treesitter/nvim-treesitter :build (fn []
     ((. (require :nvim-treesitter.install) :update) {:with_sync true}))}
 
-  ;; greeter
-  :goolord/alpha-nvim
-
   ;; lsp
   :williamboman/mason.nvim                     ; manage lsp servers
   :williamboman/mason-lspconfig.nvim           ; lspconfig support for mason

@@ -20,7 +20,9 @@
   :set_vim_settings false})
 ((. (require :mini.comment)    :setup) {})
 ((. (require :mini.jump2d)     :setup) {}) ; navigate around a file
-((. (require :mini.pairs)      :setup) {})
+((. (require :mini.pairs)      :setup) {}) ; pair parentheses and brackets
+((. (require :mini.pick)       :setup) {}) ; pick files, buffers, etc.
+((. (require :mini.starter)    :setup) {}) ; start screen
 
 ;; auto indent size (does not override .editorconfig)
 ((. (require :guess-indent) :setup) {})
@@ -37,9 +39,6 @@
 ;; syntax highlighting
 ((. (require :nvim-treesitter.configs) :setup)
   {:ensure_installed [:bash :c :fennel :lua :rust :zig] :auto_install false :highlight {:enable true}})
-
-;; greeter
-((. (require :alpha) :setup) (. (require :alpha.themes.dashboard) :config))
 
 ;;; lsp config
 ;; mason
