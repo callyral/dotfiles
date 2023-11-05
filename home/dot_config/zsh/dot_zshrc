@@ -48,7 +48,7 @@ alias ls='eza -a'
 alias ..="cd .."
 alias ...="cd ../../"
 #  other
-alias lowfetchc="lowfetch -ks -c b -b -o -a" # lowfetch configured
+alias lowfetchc="lowfetch -kbc b -oa" # lowfetch configured
 
 
 # . history .
