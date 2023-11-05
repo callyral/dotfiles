@@ -7,7 +7,7 @@
 
   ;; support for fennel config
   :udayvir-singh/tangerine.nvim
-	;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
+  ;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
 
   ;; quality-of-life
   :mcauley-penney/tidy.nvim  ; trim trailing whitespace
