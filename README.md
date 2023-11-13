@@ -52,8 +52,6 @@ root config (unmanaged by chezmoi)
 
 ![screenshot one](screenshots/1.png)
 
-![screenshot two](screenshots/2.png)
-
 ## multimedia 
 
 [PipeWire](https://pipewire.org)
