@@ -1,7 +1,8 @@
 ;; colorscheme
 (set vim.opt.background :dark)
 ((. (require :catppuccin) :setup)
-  {:integrations {:gitsigns true :treesitter true}})
+  {:integrations {:gitsigns true :treesitter true}
+    :highlight {:enable true :additional_vim_regex_highlighting false}})
 (vim.cmd "colorscheme catppuccin-macchiato")
 
 ;; trim trailing whitespace
