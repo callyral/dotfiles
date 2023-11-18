@@ -47,9 +47,6 @@ alias ls='eza -a'
 #  cd
 alias ..="cd .."
 alias ...="cd ../../"
-#  other
-alias lowfetchc="lowfetch -kbc b -oa" # lowfetch configured
-
 
 # . history .
 #  see more options in zshenv
@@ -58,4 +55,4 @@ setopt histignorealldups
 setopt INC_APPEND_HISTORY
 
 # . startup .
-lowfetchc
+jawsfetch

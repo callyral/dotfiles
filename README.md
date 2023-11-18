@@ -88,9 +88,9 @@ root config (unmanaged by chezmoi)
 
 - modern alternative to ls
 
-[lowfetch](https://github.com/callyral/lowfetch)
+[jawsfetch](https://github.com/callyral/jawsfetch)
 
-- minimal system info tool by me!
+- linux system information tool written in rust by me!
 
 [neovim](https://neovim.io)
   
