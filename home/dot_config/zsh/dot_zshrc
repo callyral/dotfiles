@@ -50,9 +50,8 @@ alias ...="cd ../../"
 
 # . history .
 #  see more options in zshenv
-setopt HIST_IGNORE_ALL_DUPS
-setopt histignorealldups
-setopt INC_APPEND_HISTORY
+setopt histignoredups
+setopt incappendhistory
 
 # . startup .
 jawsfetch
