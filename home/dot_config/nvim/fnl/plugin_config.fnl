@@ -51,7 +51,7 @@
 ;; lspconfig
 (tset vim.g :coq_settings {:auto_start :shut-up})
 (local lspconfig (require :lspconfig))
-(local servers [:clangd :rust_analyzer :pyright :zls])
+(local servers [:clangd :rust_analyzer :pylsp])
 
 (each [_ lsp (ipairs servers)]
   ((. (. lspconfig lsp) :setup) ((. (require :coq) :lsp_ensure_capabilities) {})))
