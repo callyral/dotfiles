@@ -10,15 +10,16 @@
 jawsfetch
 
 # # Aliases
-let su_cmd = "doas" # doas, sudo
-
 alias l = ls -la
 alias ll = ls -la
 
-alias purge   = ^$su_cmd xbps-remove -R
-alias upd     = ^$su_cmd xbps-install -Su
-alias xpi     = ^$su_cmd xbps-install
-alias xpr     = ^$su_cmd xbps-remove
+# I use doas, but it's linked to /usr/bin/sudo
+# Using this over a $su_cmd variable since as of now it panics.
+# See: https://github.com/nushell/nushell/issues/9146
+alias purge   = sudo xbps-remove -R
+alias upd     = sudo xbps-install -Su
+alias xpi     = sudo xbps-install
+alias xpr     = sudo xbps-remove
 alias xpf     = xbps-query -Rs
 alias xpfl    = xbps-query -s
 alias xpinfo  = xbps-query -RS
