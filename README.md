@@ -132,28 +132,13 @@ root config (unmanaged by chezmoi)
 
   - better code highlighting
 
-[zsh](https://www.zsh.org)
+[nushell](https://nushell.sh)
 
-- zsh, an interactive shell
+- really nice although experimental shell
 
-- uses the [antidote](https://getantidote.github.io) plugin manager
+- [starship](https://starship.rs)
 
-  ```bash
-  # first, run this from an interactive zsh terminal session:
-  git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
-  ```
-
-- [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-
-- [zsh completions](https://github.com/zsh-users/zsh-completions)
-
-- [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-
-- [zsh abbr](https://github.com/olets/zsh-abbr)
-
-- [zsh utils](https://github.com/belak/zsh-utils)
-
-  - completion, editor and prompt
+  - very customizable shell prompt
 
 ## apps
 
