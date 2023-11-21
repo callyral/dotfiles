@@ -84,10 +84,6 @@ root config (unmanaged by chezmoi)
 
 - tty display manager
 
-[eza](https://github.com/eza-community/eza)
-
-- modern alternative to ls
-
 [fish](https://fishshell.com/)
 
 - not used as interactive shell, instead as a completer for nushell
@@ -103,6 +99,10 @@ root config (unmanaged by chezmoi)
 - [starship](https://starship.rs)
 
   - very customizable shell prompt
+
+- [vivid](https://github.com/sharkdp/vivid)
+
+  - `LS_COLORS` generator used in the config
 
 [neovim](https://neovim.io)
   

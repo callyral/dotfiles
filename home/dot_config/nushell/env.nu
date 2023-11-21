@@ -3,17 +3,6 @@
 # version = "0.86.0"
 
 # # Environment
-$env.BAT_THEME = "Catppuccin-macchiato"
-$env.EDITOR    = "nvim"
-$env.MANPAGER  = "less"
-
-$env.LC_CTYPE = "en_US.UTF-8"
-$env.LC_ALL   = "en_US.UTF-8"
-
-$env.STARSHIP_SHELL = "nu"
-
-$env.LS_COLORS = $"(dircolors)"
-
 # ## Clean up HOME
 if ("XDG_CONFIG_HOME" in $env) {
     $env.STARSHIP_CONFIG = ($env.XDG_CONFIG_HOME | path join "starship/config.toml")
@@ -43,6 +32,18 @@ $env.CARGO_BIN   = ($env.CARGO_HOME | path join "bin")
 
 # ## Path
 $env.PATH = ($env.PATH | split row (char esep) | prepend $env.CARGO_BIN)
+
+# ## Other
+$env.BAT_THEME = "Catppuccin-macchiato"
+$env.EDITOR    = "nvim"
+$env.MANPAGER  = "less"
+
+$env.LC_CTYPE = "en_US.UTF-8"
+$env.LC_ALL   = "en_US.UTF-8"
+
+$env.STARSHIP_SHELL = "nu"
+
+$env.LS_COLORS = $"(vivid generate catppuccin-macchiato)"
 
 # # Prompt
 mkdir ~/.cache/starship
