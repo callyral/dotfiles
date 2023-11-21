@@ -28,6 +28,24 @@ alias wipe    = echo > $nu.history-path
 
 use ~/.cache/starship/init.nu
 
+
+# Use fish shell for completions. While an added dependency,
+# the fish shell has a lot of useful completions out-of-the-box.
+let fish_completer = {|spans|
+    # if the current command is an alias, get it's expansion
+    let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+
+    # overwrite
+    let spans = (if $expanded_alias != null  {
+        # put the first word of the expanded alias first in the span
+        $spans | skip 1 | prepend ($expanded_alias | split row " ")
+    } else { $spans })
+    fish --command $'complete "--do-complete=($spans | str join " ")"'
+    | $"value(char tab)description(char newline)" + $in
+    | from tsv --flexible --no-infer
+}
+
+
 let dark_theme = {
     # color for nushell primitives
     separator: dark_gray
@@ -139,7 +157,7 @@ $env.config = {
         external: {
             enable: true     # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
             max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-            completer: null
+            completer: $fish_completer
         }
     }
 
@@ -154,7 +172,7 @@ $env.config = {
         vi_normal: block # (underscore is the default)
     }
 
-    color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
+    color_config: $dark_theme
     use_grid_icons: true
     use_ansi_coloring: true
     footer_mode: "25"         # always, never, number_of_rows, auto
@@ -162,7 +180,7 @@ $env.config = {
     buffer_editor: ""         # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     bracketed_paste: true     # enable bracketed paste, currently useless on windows
     edit_mode: vi             # emacs, vi
-    shell_integration: false  # enables terminal shell integration. Off by default, as some terminals have issues with this.
+    shell_integration: true  # enables terminal shell integration. Off by default, as some terminals have issues with this.
     use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this
 
     hooks: {

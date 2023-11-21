@@ -88,9 +88,21 @@ root config (unmanaged by chezmoi)
 
 - modern alternative to ls
 
+[fish](https://fishshell.com/)
+
+- not used as interactive shell, instead as a completer for nushell
+
 [jawsfetch](https://github.com/callyral/jawsfetch)
 
 - linux system information tool written in rust by me!
+
+[nushell](https://nushell.sh)
+
+- really nice although experimental shell
+
+- [starship](https://starship.rs)
+
+  - very customizable shell prompt
 
 [neovim](https://neovim.io)
   
@@ -131,14 +143,6 @@ root config (unmanaged by chezmoi)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
   - better code highlighting
-
-[nushell](https://nushell.sh)
-
-- really nice although experimental shell
-
-- [starship](https://starship.rs)
-
-  - very customizable shell prompt
 
 ## apps
 
