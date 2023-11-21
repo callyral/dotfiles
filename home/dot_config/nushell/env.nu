@@ -12,6 +12,8 @@ $env.LC_ALL   = "en_US.UTF-8"
 
 $env.STARSHIP_SHELL = "nu"
 
+$env.LS_COLORS = $"(dircolors)"
+
 # ## Clean up HOME
 if ("XDG_CONFIG_HOME" in $env) {
     $env.STARSHIP_CONFIG = ($env.XDG_CONFIG_HOME | path join "starship/config.toml")
