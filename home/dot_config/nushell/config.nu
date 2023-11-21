@@ -9,6 +9,11 @@
 
 jawsfetch
 
+# # Functions
+
+# Wipe shell history
+def wipe-history [] { "" | save -f $nu.history-path }
+
 # # Aliases
 alias l = ls -la
 alias ll = ls -la
@@ -24,7 +29,6 @@ alias xpf     = xbps-query -Rs
 alias xpfl    = xbps-query -s
 alias xpinfo  = xbps-query -RS
 alias xpinfol = xbps-query -S
-alias wipe    = echo > $nu.history-path
 
 use ~/.cache/starship/init.nu
 
