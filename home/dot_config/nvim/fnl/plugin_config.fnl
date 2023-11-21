@@ -40,6 +40,8 @@
 ;; syntax highlighting
 ((. (require :nvim-treesitter.configs) :setup)
   {:ensure_installed [:bash :c :fennel :lua :rust :zig] :auto_install false :highlight {:enable true}})
+; nushell support (treesitter)
+((. (require :nu) :setup) {:use_lsp_features false})
 
 ;;; lsp config
 ;; mason

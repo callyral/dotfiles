@@ -5,9 +5,11 @@
   ;; icons
   :nvim-tree/nvim-web-devicons
 
-  ;; support for fennel config
+  ;; filetype support
   :udayvir-singh/tangerine.nvim
   ;:udayvir-singh/hibiscus.nvim ; fennel nvim macros
+
+  :LhKipp/nvim-nu ; nushell
 
   ;; quality-of-life
   :sontungexpt/stcursorword  ; underline cursor word
