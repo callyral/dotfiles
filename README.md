@@ -38,8 +38,6 @@ root config (unmanaged by chezmoi)
 
 - i3-compatible wlroots window manager with eye-candy
 
-- [autotiling](https://github.com/nwg-piotr/autotiling)
-
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
 
 - [swayidle](https://github.com/swaywm/swayidle)
