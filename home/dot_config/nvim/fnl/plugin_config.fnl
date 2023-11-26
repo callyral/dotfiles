@@ -50,10 +50,40 @@
    :ui {:icons {:package_installed :i :package_pending "~" :package_uninstalled :X}}})
 ((. (require :mason-lspconfig) :setup)
   {:automatic_installation true})
+;; cmp
+(local cmp (require :cmp))
+(local snippy (require :snippy))
+
+(fn has-words-before [] ; no idea what goes on here lol
+  (local unpack (or unpack table.unpack))
+  (local (line col) (unpack (vim.api.nvim_win_get_cursor 0)))
+  (and (not= col 0) (= (: (: (. (vim.api.nvim_buf_get_lines 0 (- line 1) line true) 1) :sub col col) :match "%s") nil)))
+
+(cmp.setup {
+  :snippet {
+    :expand (fn [args] (snippy.expand_snippet args.body))}
+  :mapping (cmp.mapping.preset.insert {
+    :<C-Space> (cmp.mapping.complete)
+    :<C-b> (cmp.mapping.scroll_docs -4)
+    :<C-e> (cmp.mapping.abort)
+    :<C-f> (cmp.mapping.scroll_docs 4)
+    :<CR>  (cmp.mapping.confirm {:select true})}
+    :<Tab> (cmp.mapping (fn [fallback] (if 
+          (cmp.visible) (cmp.select_next_item)
+          (snippy.can_expand_or_advance) (snippy.expand_or_advance)
+          (has-words-before) (cmp.complete)
+          (fallback))) [:i :s])
+    :<S-Tab> (cmp.mapping (fn [fallback] (if
+          (cmp.visible) (cmp.select_prev_item)
+          (snippy.can_jump -1) (snippy.previous)
+          (fallback))) [:i :s]))
+  :sources (cmp.config.sources [
+    {:name :nvim_lsp}
+    {:name :snippy}] [{:name :buffer}])})
 ;; lspconfig
-(tset vim.g :coq_settings {:auto_start :shut-up})
+(local capabilities ((. (require :cmp_nvim_lsp) :default_capabilities)))
 (local lspconfig (require :lspconfig))
 (local servers [:clangd :rust_analyzer :pylsp])
 
 (each [_ lsp (ipairs servers)]
-  ((. (. lspconfig lsp) :setup) ((. (require :coq) :lsp_ensure_capabilities) {})))
+  ((. (. lspconfig lsp) :setup) {:capabilities capabilities}))

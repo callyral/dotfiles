@@ -31,9 +31,15 @@
   ;; lsp
   :williamboman/mason.nvim                     ; manage lsp servers
   :williamboman/mason-lspconfig.nvim           ; lspconfig support for mason
-  :neovim/nvim-lspconfig                       ;
-  {1 :ms-jpq/coq_nvim :branch :coq}            ; autocompletion
-  {1 :ms-jpq/coq.artifacts :branch :artifacts} ; code snippets
+  :neovim/nvim-lspconfig
+  :hrsh7th/nvim-cmp
+  :hrsh7th/cmp-nvim-lsp
+  :hrsh7th/cmp-path
+  :hrsh7th/cmp-buffer
+
+  ;; snippets
+  :dcampos/nvim-snippy
+  :dcampos/cmp-snippy
 
   ;; colorscheme
   {1 :catppuccin/nvim :as :catppuccin}])
