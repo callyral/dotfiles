@@ -67,8 +67,16 @@
     :<C-b> (cmp.mapping.scroll_docs -4)
     :<C-e> (cmp.mapping.abort)
     :<C-f> (cmp.mapping.scroll_docs 4)
-    :<CR>  (cmp.mapping.confirm {:select true})}
-    :<Tab> (cmp.mapping (fn [fallback] (if 
+    :<CR> (cmp.mapping {:c (cmp.mapping.confirm 
+                          {:behavior cmp.ConfirmBehavior.Replace
+                          :select true})
+                         :i (fn [fallback] (if
+                            (and (cmp.visible) (cmp.get_active_entry))
+                            (cmp.confirm {:behavior cmp.ConfirmBehavior.Replace
+                                          :select false})
+                            (fallback)))
+                         :s (cmp.mapping.confirm {:select true})})
+    :<Tab> (cmp.mapping (fn [fallback] (if
           (cmp.visible) (cmp.select_next_item)
           (snippy.can_expand_or_advance) (snippy.expand_or_advance)
           (has-words-before) (cmp.complete)
@@ -76,7 +84,7 @@
     :<S-Tab> (cmp.mapping (fn [fallback] (if
           (cmp.visible) (cmp.select_prev_item)
           (snippy.can_jump -1) (snippy.previous)
-          (fallback))) [:i :s]))
+          (fallback))) [:i :s])})
   :sources (cmp.config.sources [
     {:name :nvim_lsp}
     {:name :snippy}] [{:name :buffer}])})
