@@ -1,3 +1,5 @@
+Archived: migrated to [Codeberg](https://codeberg.org/callyral/dotfiles)
+
 # dotfiles by callyral
 
 these are my dotfiles :3
